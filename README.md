@@ -11,6 +11,9 @@
 * complex
 * autodiff
 
+# stk::octave
+* stk in octave for vectorizing experiments
+  
 # Vectorize
 * Object can be vectorized as function of vector
 * Object can be vectorized as objects per channel
