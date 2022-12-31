@@ -17,6 +17,8 @@
 # Vectorize
 * Object can be vectorized as function of vector
 * Object can be vectorized as objects per channel
+* func(vector)
+* func(matrix)
 * for_each(samples,Func)
 * Vector(Filter) = Filters[x]
 * Matrix(Filter) = Filters(i,j)
