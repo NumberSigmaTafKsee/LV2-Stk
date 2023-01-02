@@ -31,6 +31,8 @@
 * He also studied Jos theory with Jos
 * He has a web page somewhere on Princeton
 * He probably does not do anything with Stk anymore
+* He wrote Real Sound Synthesis which is not really useful for the purpose it was written for
+* It is very useful if you want to know all the DSP theory though
 
 # Octave
 * Alot of JOS uses Matlab
