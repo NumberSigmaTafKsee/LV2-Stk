@@ -33,6 +33,8 @@
 * He probably does not do anything with Stk anymore
 * He wrote Real Sound Synthesis which is not really useful for the purpose it was written for
 * It is very useful if you want to know all the DSP theory though
+* At least the book says it is for games but there is not much about game audio in it
+* It is just full of all the DSP theory
 
 # Octave
 * Alot of JOS uses Matlab
