@@ -6,8 +6,12 @@
 * There exist much better stuff now that is easier to use
 
 # Purpose
-* I use this for experimenting with DSP algorithms
-* It has all the essential theory of Julius Orion Smith in it
+* The purpose is basically to study Julius Orion Smith Books
+* If you want to try the theory or do something
+* You can use Matlab
+* You can use Stk
+* You can use Faust
+
 
 # Octave
 * Alot of JOS uses Matlab
