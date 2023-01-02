@@ -12,6 +12,14 @@
 * You can use Stk
 * You can use Faust
 
+# Real Sound Synthesis
+* A useful book that contains alot of information not in JOS
+* Or, not easy to find in the complex library of JOS
+
+# Computational Synthesis
+* It is a free PDF
+* One of the best books ever about synthesis algorithms made
+
 
 # Octave
 * Alot of JOS uses Matlab
