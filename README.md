@@ -1,39 +1,11 @@
-# std-stk
+# AudioLAB-STK
 
-# Synthesis Toolkit (Stk)
-* LuaJIT
-* Python
-* GNU Octave
+# Stk is old
+* It was made along time ago
+* There is probably not a reason why you want to use this now
+* There exist much better stuff now that is easier to use
 
-# TStk<T>
-* float
-* double
-* complex
-* autodiff
+# Purpose
+* I use this for experimenting with DSP algorithms
+* It has all the essential theory of Julius Orion Smith in it
 
-# stk::octave
-* stk in octave for vectorizing experiments
-  
-```octave
-wave = zeros(1,256);
-v    = (0:255)/256;
-for j=1:1000
-  t = -1^j*(sin(2*pi*j*v)/j);
-  wave += t;
-end
-wave = 0.5 - wave;
-plot(wave);
-pause();
-```
-
-  
-# Vectorize
-* Object can be vectorized as function of vector
-* Object can be vectorized as objects per channel
-* func(vector)
-* func(matrix)
-* for_each(samples,Func)
-* Vector(Filter) = Filters[x]
-* Matrix(Filter) = Filters(i,j)
-* Tick(samples,FilterVector)
-* Tick(samples,FilterMatrix)
