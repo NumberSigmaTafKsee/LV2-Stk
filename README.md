@@ -35,6 +35,8 @@
 * It is very useful if you want to know all the DSP theory though
 * At least the book says it is for games but there is not much about game audio in it
 * It is just full of all the DSP theory
+* If you bought it to learn game audio you will be disappointed
+* it is the best introduction to the physics audio
 
 # Octave
 * Alot of JOS uses Matlab
