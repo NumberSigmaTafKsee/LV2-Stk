@@ -12,3 +12,6 @@
 # Faust
 * Most of JOS is now in the Faust libraries
 * Most of the stuff is now completed better in there and other places
+
+# It is still useable
+* If you need it
