@@ -20,6 +20,11 @@
 * It is a free PDF
 * One of the best books ever about synthesis algorithms made
 
+# Gary Scavone
+* He was one of the original author of Stk
+* He has a website with notes from some of his classes
+* he studied JOS theory with JOS
+* his class notes can be helpful if you get stuck on JOS theory
 
 # Octave
 * Alot of JOS uses Matlab
