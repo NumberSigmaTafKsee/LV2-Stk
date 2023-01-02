@@ -26,6 +26,12 @@
 * he studied JOS theory with JOS
 * his class notes can be helpful if you get stuck on JOS theory
 
+# Perry Cook
+* He was one of the original authors of stk
+* He also studied Jos theory with Jos
+* He has a web page somewhere on Princeton
+* He probably does not do anything with Stk anymore
+
 # Octave
 * Alot of JOS uses Matlab
 * So you can use them togethor
