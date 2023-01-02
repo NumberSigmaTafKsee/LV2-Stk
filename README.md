@@ -15,3 +15,5 @@
 
 # It is still useable
 * If you need it
+* If you read JOS papers, it is mentioned sometimes in them
+* All the essential JOS books are in here
