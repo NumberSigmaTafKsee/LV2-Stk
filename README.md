@@ -9,3 +9,6 @@
 * I use this for experimenting with DSP algorithms
 * It has all the essential theory of Julius Orion Smith in it
 
+# Faust
+* Most of JOS is now in the Faust libraries
+* Most of the stuff is now completed better in there and other places
