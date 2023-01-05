@@ -19,3 +19,11 @@
 # Arduino/Pi
 * I am working on it to work on the Rasputin/Duino Pi 
 
+# Gamma
+* Gamma is another library
+* It has alot of useful stuff
+* I modify it to do the things I like
+
+# Loris
+* Loris is an analyzer and additive synthesizer
+* It is useful despite nobody understands how to use it
