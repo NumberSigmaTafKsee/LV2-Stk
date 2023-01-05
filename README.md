@@ -1,5 +1,9 @@
 # AudioLAB-STK
 
+# It is a live lab
+* Things will change
+* Things will break
+* There is probably nothing you want in here
 
 # Purpose
 * The purpose is basically to study Julius Orion Smith Books
