@@ -29,7 +29,18 @@
 * Boost::Autodiff
 * Eigen::Autodiff
 
+# Spectrum
+* AudioFFT
+* FFTConvolver
+* kissfft
+* minfft
+* tinyfft
+* ooura fft
+* four1
 
+# Wave Digital Filters
+* Wavy
+* rt-wdf
 
 
 
