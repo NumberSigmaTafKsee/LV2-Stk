@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -fPIC -march=native -std=gnu++0x -rdynamic CMakeFiles/mfcc_calculation.dir/mfcc_calculation.cpp.o -o mfcc_calculation  ../../libAquila.a ../../lib/libOoura_fft.a 

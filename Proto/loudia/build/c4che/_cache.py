@@ -1,0 +1,80 @@
+AR = ['/usr/bin/ar']
+ARFLAGS = ['rcs']
+BINDIR = '/usr/local/bin'
+CC_VERSION = ('10', '3', '0')
+CFLAGS_PYEMBED = ['-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong']
+CFLAGS_PYEXT = ['-pthread', '-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong', '-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong']
+COMPILER_CXX = 'g++'
+CPPPATH_ST = '-I%s'
+CXX = ['/usr/bin/g++']
+CXXFLAGS = ['-O3', '-fPIC', '-W', '-Wall', '-msse2', '-DNDEBUG', '-I/usr/lib/python2.7/dist-packages/numpy/core/include']
+CXXFLAGS_MACBUNDLE = ['-fPIC']
+CXXFLAGS_PYEMBED = ['-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong', '-fno-strict-aliasing']
+CXXFLAGS_PYEXT = ['-pthread', '-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong', '-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong', '-fno-strict-aliasing']
+CXXFLAGS_cxxshlib = ['-fPIC']
+CXXLNK_SRC_F = []
+CXXLNK_TGT_F = ['-o']
+CXX_NAME = 'gcc'
+CXX_SRC_F = []
+CXX_TGT_F = ['-c', '-o']
+DEFINES = ['HAVE_FFMPEG=1', 'PYTHONDIR="/usr/lib/python2.7/dist-packages"', 'PYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', 'HAVE_PYTHON_H=1', 'HAVE_FFTW3=1', 'HAVE_SAMPLERATE=1', 'HAVE_EIGEN=1']
+DEFINES_PYEMBED = ['NDEBUG', '_FORTIFY_SOURCE=2']
+DEFINES_PYEXT = ['NDEBUG', '_FORTIFY_SOURCE=2', 'NDEBUG', '_FORTIFY_SOURCE=2']
+DEFINES_ST = '-D%s'
+DEST_BINFMT = 'elf'
+DEST_CPU = 'x86_64'
+DEST_OS = 'linux'
+INCLUDES_EIGEN = ['/usr/local/include/eigen3']
+INCLUDES_FFMPEG = ['/usr/include/x86_64-linux-gnu']
+INCLUDES_PYEMBED = ['/usr/include/python2.7']
+INCLUDES_PYEXT = ['/usr/include/python2.7']
+LIBDIR = '/usr/local/lib'
+LIBPATH_PYEMBED = ['/usr/lib']
+LIBPATH_PYEXT = ['/usr/lib']
+LIBPATH_PYTHON2.7 = ['/usr/lib']
+LIBPATH_ST = '-L%s'
+LIB_FFMPEG = ['avformat', 'avcodec', 'avresample', 'avutil']
+LIB_FFTW3 = ['fftw3', 'fftw3f', 'fftw3l']
+LIB_PYEMBED = ['python2.7']
+LIB_PYEXT = ['python2.7']
+LIB_PYTHON2.7 = ['python2.7']
+LIB_SAMPLERATE = ['samplerate']
+LIB_ST = '-l%s'
+LINKFLAGS = ['-lm']
+LINKFLAGS_MACBUNDLE = ['-bundle', '-undefined', 'dynamic_lookup']
+LINKFLAGS_PYEMBED = ['-Wl,-Bsymbolic-functions', '-Wl,-z,relro']
+LINKFLAGS_PYEXT = ['-Wl,-Bsymbolic-functions', '-Wl,-z,relro', '-pthread', '-Wl,-O1', '-Wl,-Bsymbolic-functions', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro']
+LINKFLAGS_cxxshlib = ['-shared']
+LINKFLAGS_cxxstlib = ['-Wl,-Bstatic']
+LINK_CXX = ['/usr/bin/g++']
+PKGCONFIG = ['/usr/bin/pkg-config']
+PREFIX = '/usr/local'
+PYC = 1
+PYCMD = '"import sys, py_compile;py_compile.compile(sys.argv[1], sys.argv[2])"'
+PYFLAGS = ''
+PYFLAGS_OPT = '-O'
+PYO = 1
+PYTHON = ['/usr/bin/python2']
+PYTHONARCHDIR = '/usr/lib/python2.7/dist-packages'
+PYTHONDIR = '/usr/lib/python2.7/dist-packages'
+PYTHON_VERSION = '2.7'
+RPATH_ST = '-Wl,-rpath,%s'
+SHLIB_MARKER = '-Wl,-Bdynamic'
+SONAME_ST = '-Wl,-h,%s'
+STLIBPATH_ST = '-L%s'
+STLIB_MARKER = '-Wl,-Bstatic'
+STLIB_ST = '-l%s'
+SWIG = ['/usr/local/bin/swig']
+SWIGDEF_ST = '-D%s'
+SWIGPATH_ST = '-I%s'
+SWIG_VERSION = (4, 1, 0)
+cxxprogram_PATTERN = '%s'
+cxxshlib_PATTERN = 'lib%s.so'
+cxxstlib_PATTERN = 'lib%s.a'
+define_key = ['HAVE_FFMPEG', 'HAVE_FFTW3', 'HAVE_SAMPLERATE', 'HAVE_EIGEN', 'PYTHONDIR', 'PYTHONARCHDIR', 'HAVE_PYTHON_H']
+macbundle_PATTERN = '%s.bundle'
+option_cpptests = False
+option_debug = False
+option_doc = False
+option_no_python_bindings = False
+pyext_PATTERN = '%s.so'

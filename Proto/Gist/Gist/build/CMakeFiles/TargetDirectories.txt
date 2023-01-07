@@ -1,0 +1,5 @@
+/home/quake/Projects/GobyJIT/Analyzer/Gist/Gist/build/CMakeFiles/edit_cache.dir
+/home/quake/Projects/GobyJIT/Analyzer/Gist/Gist/build/CMakeFiles/rebuild_cache.dir
+/home/quake/Projects/GobyJIT/Analyzer/Gist/Gist/build/src/CMakeFiles/Gist.dir
+/home/quake/Projects/GobyJIT/Analyzer/Gist/Gist/build/src/CMakeFiles/edit_cache.dir
+/home/quake/Projects/GobyJIT/Analyzer/Gist/Gist/build/src/CMakeFiles/rebuild_cache.dir

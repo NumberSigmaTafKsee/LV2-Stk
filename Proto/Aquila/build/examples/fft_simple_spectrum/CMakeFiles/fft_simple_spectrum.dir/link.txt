@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -fPIC -march=native -std=gnu++0x -rdynamic CMakeFiles/fft_simple_spectrum.dir/fft_simple_spectrum.cpp.o -o fft_simple_spectrum  ../../libAquila.a ../../lib/libOoura_fft.a 

@@ -1,0 +1,3839 @@
+// i do not use these anymore it requires an allocation 
+// they could be removed
+template<typename T> T* vector_addf(T * x, T * y, int n);
+template<typename T> T* vector_subf(T * x, T * y, int n);
+template<typename T> T* vector_mulf(T * x, T * y, int n);
+template<typename T> T* vector_divf(T * x, T * y, int n);
+template<typename T> T* vector_modf(T * x, T * y, int n);
+
+template<typename T> T* vector_acosf(T * devPtr, int n);
+template<typename T> T* vector_acoshf(T * devPtr, int n);
+template<typename T> T* vector_asinf(T * devPtr, int n);
+template<typename T> T* vector_asinhf(T * devPtr, int n);
+template<typename T> T* vector_atan2f(T * a, T * b, int n);
+template<typename T> T* vector_atanf(T * devPtr, int n);
+template<typename T> T* vector_atanhf(T * devPtr, int n);
+template<typename T> T* vector_cbrtf(T * devPtr, int n);
+template<typename T> T* vector_ceilf(T * devPtr, int n);
+template<typename T> T* vector_cosf(T * devPtr, int n);
+template<typename T> T* vector_coshf(T * devPtr, int n);
+template<typename T> T* vector_exp10f(T * devPtr, int n);
+template<typename T> T* vector_exp2f(T * devPtr, int n);
+template<typename T> T* vector_expf(T * devPtr, int n);
+template<typename T> T* vector_expm1f(T * devPtr, int n);
+template<typename T> T* vector_fabsf(T * devPtr, int n);
+template<typename T> T* vector_floorf(T * devPtr, int n);
+template<typename T> T* vector_fmaxf(T * x, T * y, int n);
+template<typename T> T* vector_fminf(T * x, T * y, int n);
+template<typename T> T* vector_fmodf(T * x, T * y, int n);
+template<typename T> T* vector_hypotf(T * x, T * y, int n);
+template<typename T> T* vector_log10f(T * x, int n);
+template<typename T> T* vector_log1pf(T * x, int n);
+template<typename T> T* vector_log2f(T * x, int n);
+template<typename T> T* vector_logbf(T * x, int n);
+template<typename T> T* vector_powf(T * x, T * y, int n);
+template<typename T> T* vector_rsqrtf(T * x, int n);
+template<typename T> T* vector_sinf(T * x, int n);
+template<typename T> T* vector_sinhf(T * x, int n);
+template<typename T> T* vector_sinpif(T * x, int n);
+template<typename T> T* vector_sqrtf(T * x, int n);
+template<typename T> T* vector_tanf(T * x, int n);
+template<typename T> T* vector_tanhf(T * x, int n);
+
+template<typename T> T* vector_sigmoidf(T * devPtr, int n);
+template<typename T> T* vector_sigmoid_gradf(T * devPtr, int n);
+template<typename T> T* vector_tanh_gradf(T * devPtr, int n);
+template<typename T> T* vector_reluf(T * devPtr, int n);
+template<typename T> T* vector_relu_gradf(T * devPtr, int n);
+template<typename T> T* vector_softmaxf(T * x, int n);
+
+template<typename T> T* vector_addf_const(T * x, T  y, int n);
+template<typename T> T* vector_subf_const(T * x, T  y, int n);
+template<typename T> T* vector_mulf_const(T * x, T  y, int n);
+template<typename T> T* vector_divf_const(T * x, T  y, int n);
+template<typename T> T* vector_modf_const(T * x, T  y, int n);
+template<typename T> T* vector_atan2f_const(T * a, T b, int n);
+template<typename T> T* vector_fmaxf_const(T * x, T  y, int n);
+template<typename T> T* vector_fminf_const(T * x, T  y, int n);
+template<typename T> T* vector_fmodf_const(T * x, T  y, int n);
+template<typename T> T* vector_powf_const(T * x, T y, int n);
+template<typename T> T* vector_fdimf_const(T * a, T  b, int n);
+template<typename T> T* vector_fdividef_const(T * a, T  b, int n);
+template<typename T> T* vector_remainderf_const(T * x, T y, int n);
+template<typename T> T* vector_hypotf_const(T * x, T  y, int n);
+template<typename T> T* vector_rhypotf_const(T * x, T y, int n);
+
+
+template<typename T> T* vector_addf_scalar(T * x, T * y, int n);
+template<typename T> T* vector_subf_scalar(T * x, T * y, int n);
+template<typename T> T* vector_mulf_scalar(T * x, T * y, int n);
+template<typename T> T* vector_divf_scalar(T * x, T * y, int n);
+template<typename T> T* vector_modf_scalar(T * x, T * y, int n);
+template<typename T> T* vector_atan2f_scalar(T * a, T *b, int n);
+template<typename T> T* vector_fmaxf_scalar(T * x, T  *y, int n);
+template<typename T> T* vector_fminf_scalar(T * x, T  *y, int n);
+template<typename T> T* vector_fmodf_scalar(T * x, T  *y, int n);
+template<typename T> T* vector_powf_scalar(T * x, T *y, int n);
+template<typename T> T* vector_fdimf_scalar(T * a, T  *b, int n);
+template<typename T> T* vector_fdividef_scalar(T * a, T *b, int n);
+template<typename T> T* vector_hypotf_scalar(T * x, T  *y, int n);
+template<typename T> T* vector_remainderf_scalar(T * x, T *y, int n);
+template<typename T> T* vector_rhypotf_scalar(T * x, T *y, int n);
+
+template<typename T> T* vector_copysignf(T * X, T *Y, int n);
+template<typename T> T* vector_cospif(T * devPtr, int n);
+template<typename T> T* vector_cyl_bessel_i0f(T * devPtr, int n);
+template<typename T> T* vector_cyl_bessel_i1f(T * devPtr, int n);
+template<typename T> T* vector_erfcf(T * devPtr, int n);
+template<typename T> T* vector_erfcinvf(T * devPtr, int n);
+template<typename T> T* vector_erfcxf(T * devPtr, int n);
+template<typename T> T* vector_erff(T * devPtr, int n);
+template<typename T> T* vector_erfinvf(T * devPtr, int n);
+template<typename T> T* vector_fdimf(T * a, T * b, int n);
+template<typename T> T* vector_fdividef(T * a, T * b, int n);
+template<typename T> T* vector_fmaf(T * x, T * y, T * z, int n);
+template<typename T> T* vector_ilogbf(T * x, int n);
+template<typename T> T* vector_j0f(T * x, int n);
+template<typename T> T* vector_j1f(T * x, int n);
+template<typename T> T* vector_jnf(T * x, int N, int n);
+template<typename T> T* vector_ldexpf(T * x, int exp, int n);
+template<typename T> T* vector_lgammaf(T * x, int n);
+template<typename T> long long* vector_llrintf(T * x, int n);
+template<typename T> long long* vector_llroundf(T * x, int n);
+template<typename T> long* vector_lrintf(T * x, int n);
+template<typename T> long* vector_lroundf(T * x, int n);
+template<typename T> T* vector_nearbyintf(T * x, int n);
+template<typename T> T* vector_norm3df(T * x, T * y, T * z, int n);
+template<typename T> T* vector_norm4df(T * x, T * y, T * z, T * q, int n);
+template<typename T> T* vector_normcdff(T * x, int n);
+template<typename T> T* vector_normcdfinvf(T * x, int n);
+template<typename T> T* vector_normf(int dim, T * x, int n);
+template<typename T> T* vector_rcbrtf(T * x, int n);
+template<typename T> T* vector_remainderf(T * x, T * y, int n);
+template<typename T> T* vector_rhypotf(T * x, T * y, int n);
+template<typename T> T* vector_rnorm3df(T * x, T * y, T * z, int n);
+template<typename T> T* vector_rnorm4df(T * x, T * y, T * z, T * q, int n);
+template<typename T> T* vector_rnormf(int dim, T * x, int n);
+template<typename T> T* vector_tgammaf(T * x, int n);
+template<typename T> T* vector_y0f(T * x, int n);
+template<typename T> T* vector_y1f(T * x, int n);
+template<typename T> T* vector_ynf(int N, T * x, int n);
+template<typename T> T* vector_scalblnf(T * x, long int M, int n);
+
+template<typename T> T* vector_truncf(T * x, int n);
+
+
+
+
+
+/*
+// the kernel must wrap the call to the GPU kernel.
+typedef T* (*vector_kernel1)(T * input, int n);
+typedef T* (*vector_kernel2)(T * x, T * y, int n);
+typedef T* (*vector_kernel3)(T * x, T * y, T * z, int n);
+typedef T* (*vector_kernel4)(T * x, T * y, T * z, T * w, int n);
+
+void    register_vector_kernel1(const char* name, vector_kernel1 kernel);
+void    register_vector_kernel2(const char* name, vector_kernel2 kernel);
+void    register_vector_kernel3(const char* name, vector_kernel3 kernel);
+void    register_vector_kernel4(const char* name, vector_kernel4 kernel);
+
+T*  execute_vector_kernel1(const char* name, T * input, int n);
+T*  execute_vector_kernel2(const char* name, T * i, T * j, int n);
+T*  execute_vector_kernel3(const char* name, T * i, T * j, T *k, int n);
+T*  execute_vector_kernel4(const char* name, T * i, T * j, T *k, T *w, int n);
+*/
+
+template<typename T>
+T* _2d_mulf(T * a, T * b, int M, int N);
+
+template<typename T>
+T* _2d_addf(T * a, T * b, int M, int N);
+
+template<typename T>
+T* _2d_subf(T * a, T * b, int M, int N);
+
+template<typename T>
+T* _2d_divf(T * a, T * b, int M, int N);
+
+template<typename T>
+T* _2d_modf(T * a, T * b, int M, int N);
+
+// goes in matrix_float.h
+template<typename T>
+T* matrix_transposef(T * input, int M, int N);
+template<typename T>
+T* matrix_hadamardf(T * a, T * b, int M, int N, int K);
+template<typename T>
+T* matrix_multiplyf(T * a, T * b, int M, int N, int K);
+template<typename T>
+T* matrix_addf(T * a, T * b, int M, int N, int K);
+template<typename T>
+T* matrix_subf(T * a, T * b, int M, int N, int K);
+
+template<typename T>
+T* matrix_acosf(T * input, int M, int N);
+template<typename T>
+T* matrix_asinf(T * input, int M, int N);
+template<typename T>
+T* matrix_atanf(T * input, int M, int N);
+template<typename T>
+T* matrix_atan2f(T * x, T * y, int M, int N);
+
+template<typename T>
+T* matrix_cosf(T * input, int M, int N);
+template<typename T>
+T* matrix_sinf(T * input, int M, int N);
+template<typename T>
+T* matrix_tanf(T * input, int M, int N);
+
+template<typename T>
+T* matrix_acoshf(T * input, int M, int N);
+template<typename T>
+T* matrix_asinhf(T * input, int M, int N);
+template<typename T>
+T* matrix_atanhf(T * input, int M, int N);
+
+template<typename T>
+T* matrix_coshf(T * input, int M, int N);
+template<typename T>
+T* matrix_sinhf(T * input, int M, int N);
+template<typename T>
+T* matrix_tanhf(T * input, int M, int N);
+template<typename T>
+T* matrix_ceilf(T * devPtr, int M, int N);
+
+template<typename T>
+T* matrix_exp10f(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_exp2f(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_expf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_expm1f(T * devPtr,int M, int N);
+
+template<typename T>
+T* matrix_fabsf(T * devPtr,int M, int N);
+template<typename T>
+T* matrix_floorf(T * devPtr,int M, int N);
+template<typename T>
+T* matrix_fmaxf(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_fminf(T * x, T * y,int M, int N);
+template<typename T>
+T* matrix_fmodf(T * x, T * y,int M, int N);
+template<typename T>
+T* matrix_log10f(T * x, int M, int N);
+template<typename T>
+T* matrix_log1pf(T * x, int M, int N);
+template<typename T>
+T* matrix_log2f(T * x, int M, int N);
+template<typename T>
+T* matrix_logbf(T * x, int M, int N);
+template<typename T>
+T* matrix_powf(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_rsqrtf(T * x, int M, int N);
+template<typename T>
+T* matrix_sqrtf(T * x, int M, int N);
+template<typename T>
+T* matrix_sigmoidf(T * devPtr,int M, int N);
+template<typename T>
+T* matrix_sigmoid_gradf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_tanh_gradf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_reluf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_relu_gradf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_softmaxf(T * x, int M, int N);
+
+
+template<typename T>
+T* matrix_cbrtf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_cospif(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_cyl_bessel_i0f(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_cyl_bessel_i1f(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_erfcf(T * devPtr,int M, int N);
+template<typename T>
+T* matrix_erfcinvf(T * devPtr,int M, int N);
+template<typename T>
+T* matrix_erfcxf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_erff(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_erfinvf(T * devPtr, int M, int N);
+template<typename T>
+T* matrix_fdimf(T * a, T * b, int M, int N);
+template<typename T>
+T* matrix_fdividef(T * a, T * b, int M, int N);
+template<typename T>
+T* matrix_fmaf(T * x, T * y, T * z, int M, int N);
+template<typename T>
+T* matrix_hypotf(T * x, T * y,int M, int N);
+template<typename T>
+T* matrix_ilogbf(T * x,int M, int N);
+template<typename T>
+T* matrix_j0f(T * x,int M, int N);
+template<typename T>
+T* matrix_j1f(T * x,int M, int N);
+template<typename T>
+T* matrix_jnf(T * x, int n, int M, int N);
+template<typename T>
+T* matrix_ldexpf(T * x, int exp, int M, int N);
+template<typename T>
+T* matrix_lgammaf(T * x, int M, int N);
+template<typename T>
+T* matrix_nearbyintf(T * x, int m, int n);
+template<typename T>
+T* matrix_norm3df(T * x, T * y, T * z, int M, int N);
+template<typename T>
+T* matrix_norm4df(T * x, T * y, T * z, T * q, int M, int N);
+template<typename T>
+T* matrix_normcdff(T * x,int M, int N);
+template<typename T>
+T* matrix_normcdfinvf(T * x,int M, int N);
+template<typename T>
+T* matrix_normf(int dim, T * x, int M, int N);
+template<typename T>
+T* matrix_remainderf(T * x, T * y,int M, int N);
+template<typename T>
+T* matrix_rcbrtf(T * x,int M, int N);
+template<typename T>
+T* matrix_rhypotf(T * x, T * y,int M, int N);
+template<typename T>
+T* matrix_rnorm3df(T * x, T * y, T * z,int M, int N);
+template<typename T>
+T* matrix_rnorm4df(T * x, T * y, T * z, T * q, int M, int N);
+template<typename T>
+T* matrix_rnormf(int dim, T * x, int M, int N);
+template<typename T>
+T* matrix_scalblnf(T * x, long int n, int M, int N);
+template<typename T>
+T* matrix_sinpif(T * x, int M, int N);
+template<typename T>
+T* matrix_tgammaf(T * x, int M, int N);
+template<typename T>
+T* matrix_y0f(T * x, int M, int N);
+template<typename T>
+T* matrix_y1f(T * x, int M, int N);
+template<typename T>
+T* matrix_ynf(int n, T * x, int M, int N);
+
+template<typename T>
+T* matrix_addf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_subf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_mulf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_divf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_modf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_atan2f_const(T * a, T b, int M, int N);
+template<typename T>
+T* matrix_fmaxf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_fminf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_fmodf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_powf_const(T * x, T y, int M, int N);
+template<typename T>
+T* matrix_fdimf_const(T * a, T  b, int M, int N);
+template<typename T>
+T* matrix_fdividef_const(T * a, T  b, int M, int N);
+template<typename T>
+T* matrix_hypotf_const(T * x, T  y, int M, int N);
+template<typename T>
+T* matrix_remainderf_const(T * x, T y, int M, int N);
+template<typename T>
+T* matrix_rhypotf_const(T * x, T y,int M, int N);
+
+template<typename T>
+T* matrix_addf_scalar(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_subf_scalar(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_mulf_scalar(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_divf_scalar(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_modf_scalar(T * x, T * y, int M, int N);
+template<typename T>
+T* matrix_atan2f_scalar(T * a, T *b, int M, int N);
+template<typename T>
+T* matrix_fmaxf_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T* matrix_fminf_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T* matrix_fmodf_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T* matrix_powf_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T *matrix_fdimf_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T *matrix_fdividef_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T *matrix_hypotf_scalar(T * x, T *y,  int M, int N);
+template<typename T>
+T* matrix_remainderf_scalar(T * x, T *y, int M, int N);
+template<typename T>
+T* matrix_rhypotf_scalar(T * x, T *y, int M, int N);
+
+template<typename T>
+T* matrix_copysignf(T * X, T *Y, int M, int N);
+
+template<typename T>
+T* matrix_truncf(T * x, int M, int N);
+
+template float* vector_addf(float * x, float * y, int n);
+template float* vector_subf(float * x, float * y, int n);
+template float* vector_mulf(float * x, float * y, int n);
+template float* vector_divf(float * x, float * y, int n);
+template float* vector_modf(float * x, float * y, int n);
+template float* vector_acosf(float * devPtr, int n);
+template float* vector_acoshf(float * devPtr, int n);
+template float* vector_asinf(float * devPtr, int n);
+template float* vector_asinhf(float * devPtr, int n);
+template float* vector_atan2f(float * a, float * b, int n);
+template float* vector_atanf(float * devPtr, int n);
+template float* vector_atanhf(float * devPtr, int n);
+template float* vector_cbrtf(float * devPtr, int n);
+template float* vector_ceilf(float * devPtr, int n);
+template float* vector_cosf(float * devPtr, int n);
+template float* vector_coshf(float * devPtr, int n);
+template float* vector_exp10f(float * devPtr, int n);
+template float* vector_exp2f(float * devPtr, int n);
+template float* vector_expf(float * devPtr, int n);
+template float* vector_expm1f(float * devPtr, int n);
+template float* vector_fabsf(float * devPtr, int n);
+template float* vector_floorf(float * devPtr, int n);
+template float* vector_fmaxf(float * x, float * y, int n);
+template float* vector_fminf(float * x, float * y, int n);
+template float* vector_fmodf(float * x, float * y, int n);
+template float* vector_hypotf(float * x, float * y, int n);
+template float* vector_log10f(float * x, int n);
+template float* vector_log1pf(float * x, int n);
+template float* vector_log2f(float * x, int n);
+template float* vector_logbf(float * x, int n);
+template float* vector_powf(float * x, float * y, int n);
+template float* vector_rsqrtf(float * x, int n);
+template float* vector_sinf(float * x, int n);
+template float* vector_sinhf(float * x, int n);
+template float* vector_sinpif(float * x, int n);
+template float* vector_sqrtf(float * x, int n);
+template float* vector_tanf(float * x, int n);
+template float* vector_tanhf(float * x, int n);
+template float* vector_sigmoidf(float * devPtr, int n);
+template float* vector_sigmoid_gradf(float * devPtr, int n);
+template float* vector_tanh_gradf(float * devPtr, int n);
+template float* vector_reluf(float * devPtr, int n);
+template float* vector_relu_gradf(float * devPtr, int n);
+template float* vector_softmaxf(float * x, int n);
+template float* vector_addf_const(float * x, float  y, int n);
+template float* vector_subf_const(float * x, float  y, int n);
+template float* vector_mulf_const(float * x, float  y, int n);
+template float* vector_divf_const(float * x, float  y, int n);
+template float* vector_modf_const(float * x, float  y, int n);
+template float* vector_atan2f_const(float * a, float b, int n);
+template float* vector_fmaxf_const(float * x, float  y, int n);
+template float* vector_fminf_const(float * x, float  y, int n);
+template float* vector_fmodf_const(float * x, float  y, int n);
+template float* vector_powf_const(float * x, float y, int n);
+template float* vector_fdimf_const(float * a, float  b, int n);
+template float* vector_fdividef_const(float * a, float  b, int n);
+template float* vector_remainderf_const(float * x, float y, int n);
+template float* vector_hypotf_const(float * x, float  y, int n);
+template float* vector_rhypotf_const(float * x, float y, int n);
+template float* vector_addf_scalar(float * x, float * y, int n);
+template float* vector_subf_scalar(float * x, float * y, int n);
+template float* vector_mulf_scalar(float * x, float * y, int n);
+template float* vector_divf_scalar(float * x, float * y, int n);
+template float* vector_modf_scalar(float * x, float * y, int n);
+template float* vector_atan2f_scalar(float * a, float *b, int n);
+template float* vector_fmaxf_scalar(float * x, float  *y, int n);
+template float* vector_fminf_scalar(float * x, float  *y, int n);
+template float* vector_fmodf_scalar(float * x, float  *y, int n);
+template float* vector_powf_scalar(float * x, float *y, int n);
+template float* vector_fdimf_scalar(float * a, float  *b, int n);
+template float* vector_fdividef_scalar(float * a, float *b, int n);
+template float* vector_hypotf_scalar(float * x, float  *y, int n);
+template float* vector_remainderf_scalar(float * x, float *y, int n);
+template float* vector_rhypotf_scalar(float * x, float *y, int n);
+template float* vector_copysignf(float * X, float *Y, int n);
+template float* vector_cospif(float * devPtr, int n);
+template float* vector_cyl_bessel_i0f(float * devPtr, int n);
+template float* vector_cyl_bessel_i1f(float * devPtr, int n);
+template float* vector_erfcf(float * devPtr, int n);
+template float* vector_erfcinvf(float * devPtr, int n);
+template float* vector_erfcxf(float * devPtr, int n);
+template float* vector_erff(float * devPtr, int n);
+template float* vector_erfinvf(float * devPtr, int n);
+template float* vector_fdimf(float * a, float * b, int n);
+template float* vector_fdividef(float * a, float * b, int n);
+template float* vector_fmaf(float * x, float * y, float * z, int n);
+template float* vector_ilogbf(float * x, int n);
+template float* vector_j0f(float * x, int n);
+template float* vector_j1f(float * x, int n);
+template float* vector_jnf(float * x, int N, int n);
+template float* vector_ldexpf(float * x, int exp, int n);
+template float* vector_lgammaf(float * x, int n);
+template long long* vector_llrintf(float * x, int n);
+template long long* vector_llroundf(float * x, int n);
+template long* vector_lrintf(float * x, int n);
+template long* vector_lroundf(float * x, int n);
+template float* vector_nearbyintf(float * x, int n);
+template float* vector_norm3df(float * x, float * y, float * z, int n);
+template float* vector_norm4df(float * x, float * y, float * z, float * q, int n);
+template float* vector_normcdff(float * x, int n);
+template float* vector_normcdfinvf(float * x, int n);
+template float* vector_normf(int dim, float * x, int n);
+template float* vector_rcbrtf(float * x, int n);
+template float* vector_remainderf(float * x, float * y, int n);
+template float* vector_rhypotf(float * x, float * y, int n);
+template float* vector_rnorm3df(float * x, float * y, float * z, int n);
+template float* vector_rnorm4df(float * x, float * y, float * z, float * q, int n);
+template float* vector_rnormf(int dim, float * x, int n);
+template float* vector_tgammaf(float * x, int n);
+template float* vector_y0f(float * x, int n);
+template float* vector_y1f(float * x, int n);
+template float* vector_ynf(int N, float * x, int n);
+template float* vector_scalblnf(float * x, long int M, int n);
+template float* vector_truncf(float * x, int n);
+
+
+
+/* what we want is this 
+template<typename T> __global__ void vector_program(T * x, T * out, int N) {
+    int idx = threadIdx.x + blockIdx.x * blockDim.x;     
+    out[idx] = eval(x)
+}
+
+////////////////////////////////////
+Vector X;
+Matrix M;
+Vector output;
+
+f(x) = M*X;
+////////////////////////////////////
+
+=>
+    int row = threadIdx.x + blockIdx.x * blockDim.x;     
+    int col = threadIdx.y + blockIdx.y * blockDim.y;     
+    if(row < m && col < n)
+        out[col] = M[row*n + col] * X[col]
+
+*/
+
+/*
+std::map<std::string,vector_kernel1> vector_map1;
+std::map<std::string,vector_kernel2> vector_map2;
+std::map<std::string,vector_kernel3> vector_map3;
+std::map<std::string,vector_kernel4> vector_map4;
+
+void register_vector_kernel1(const char * name, vector_kernel1 kernel) {
+    // should assert if already exist?
+    vector_map1[name] = kernel;
+}
+void register_vector_kernel2(const char * name, vector_kernel2 kernel) {
+    vector_map2[name] = kernel;
+}
+void register_vector_kernel3(const char * name, vector_kernel3 kernel) {
+    vector_map3[name] = kernel;
+}
+void register_vector_kernel4(const char * name, vector_kernel4 kernel) {
+    vector_map4[name] = kernel;
+}
+T* execute_vector_kernel1(const char * name, T * x, int n) {
+    typename std::map<std::string,vector_kernel1>::iterator i = vector_map1.find(name);
+    // assert or return NULL?
+    if(i == vector_map1.end()) return NULL;
+    return (i->second)(x,n);
+}
+T* execute_vector_kernel2(const char * name, T * x, T * y, int n) {
+    typename std::map<std::string,vector_kernel2>::iterator i = vector_map2.find(name);
+    // assert or return NULL?
+    if(i == vector_map2.end()) return NULL;
+    return (i->second)(x,y,n);
+}
+T* execute_vector_kernel3(const char * name, T * x, T * y, T * z, int n) {
+    typename std::map<std::string,vector_kernel3>::iterator i = vector_map3.find(name);
+    // assert or return NULL?
+    if(i == vector_map3.end()) return NULL;
+    return (i->second)(x,y,z,n);
+}
+T* execute_vector_kernel4(const char * name, T * x, T * y, T * z, T * w, int n) {
+    typename std::map<std::string,vector_kernel4>::iterator i = vector_map4.find(name);
+    // assert or return NULL?
+    if(i == vector_map4.end()) return NULL;
+    return (i->second)(x,y,z,w,n);
+}
+*/
+
+// dont use it
+/*
+template<typename T>
+template<typename T> __global__ void vector_sum_device(T * x,T *out, int N)
+{
+    
+    //int idx = threadIdx.x + blockIdx.x * blockDim.x;     
+    //if(idx < N) *out += x[idx];
+    for(int i = 0; i < N; i++) 
+    {
+        *out += x[i];
+        
+    }
+}
+
+T vector_sumf(T * x, int n)
+{        
+    
+    T * output = find_memory<T>(1);
+    if(output == NULL) cudaMalloc((void**)&output,sizeof(T));    
+    T zero = 0.0f;
+    cudaMemcpyAsync(output,&zero,sizeof(T),cudaMemcpyHostToDevice);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_sum_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);        
+    T o=0;
+    cudaMemcpyAsync(&o,output,sizeof(T),cudaMemcpyDeviceToHost);
+    return_memory(1,output);
+    
+    T *tmp = (T*)calloc(n,sizeof(T));
+    cudaMemcpyAsync(tmp,x,n*sizeof(T),cudaMemcpyDeviceToHost, get_cuda_stream());
+    T o = 0.0;
+    for(size_t i = 0; i < n; i++) o += tmp[i];
+    free(tmp);    
+    return o;
+}
+
+template<typename T> __global__ void vector_prod_device(T * x,T *out, int N)
+{
+    for(int i = 0; i < N; i++) {
+        *out *= x[i];
+        __syncthreads();
+    }
+}
+
+T vector_prodf(T * x, int n)
+{
+    *
+    T * output = find_memory<T>(1);
+    if(output == NULL) cudaMalloc((void**)&output,sizeof(T));    
+    T zero = 1.0f;
+    cudaMemcpyAsync(output,&zero,sizeof(T),cudaMemcpyHostToDevice);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_prod_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);        
+    T o=0;
+    cudaMemcpyAsync(&o,output,sizeof(T),cudaMemcpyDeviceToHost);
+    return_memory(1,output);
+    
+    T *tmp = (T*)calloc(n,sizeof(T));
+    cudaMemcpyAsync(tmp,x,n*sizeof(T),cudaMemcpyDeviceToHost, get_cuda_stream());
+    T o = 1.0;
+    for(size_t i = 0; i < n; i++) o *= tmp[i];
+    free(tmp);    
+    return o;
+}
+*/
+
+template<typename T> T* vector_addf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_addf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_subf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_subf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_mulf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_mulf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_divf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_divf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_modf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_modf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_acosf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_acosf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_acoshf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_acoshf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_asinhf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_asinhf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_asinf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_asinf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_atan2f(T * a, T * b, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_atan2f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,output,n);
+    return output;
+}
+
+template<typename T> T* vector_atanf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_atanf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_atanhf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_atanhf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_ceilf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));   
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_ceilf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_cosf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_cosf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_coshf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_coshf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_exp10f(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_exp10f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_exp2f(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_exp2f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_expf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_expf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+
+template<typename T> T* vector_expm1f(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_expm1f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_fabsf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fabsf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_floorf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_floorf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_fmaxf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fmaxf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_fminf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fminf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+
+template<typename T> T* vector_fmodf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fmodf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_log10f(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_log10f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_log1pf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));        
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_log1pf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_log2f(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_log2f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_powf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_powf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_rsqrtf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rsqrtf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_sinf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sinf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_sinhf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sinhf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_sqrtf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sqrtf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_tanf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_tanf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_tanhf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_tanhf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_softmaxf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    T sum = vector_sumf(x,n);
+    assert(sum != 0.0);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);
+    vector_softmax_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,sum,n);        
+    return output;
+}
+
+template<typename T> T* vector_softmaxf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    T sum = vector_sumf(x,n);
+    assert(sum != 0.0);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);
+    vector_softmax_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,sum,n);        
+    return output;
+}
+
+template<typename T> T* vector_sigmoid_gradf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sigmoid_grad_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_tanh_gradf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_tanh_grad_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_tanh_gradf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_tanh_grad_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_relu_gradf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_relu_grad_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_addf_const(T * x, T y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_add_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_subf_const(T * x, T y, int n)
+{  
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sub_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_mulf_const(T * x, T y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_mul_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);     
+    return output;
+}
+
+template<typename T> T* vector_divf_const(T * x, T y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_div_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_modf_const(T * x, T y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_mod_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_atan2f_const(T * a, T  b, int n)
+{   
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_atan2f_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,output,n);    
+    return output;
+}
+
+template<typename T> T* vector_fmaxf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fmaxf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_fminf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fminf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_fmodf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fmodf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_powf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_powf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_addf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_add_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_subf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sub_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+template<typename T> T* vector_mulf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_mul_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+template<typename T> T* vector_divf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_div_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_modf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_mod_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_modf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_mod_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+
+template<typename T> T* vector_fmaxf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fmaxf_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+
+template<typename T> T* vector_fminf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fminf_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_powf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_powf_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_atan2f_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_atan2f_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_fdimf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdimf_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_fdividef_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdividef_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_remainderf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_remainderf_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_remainderf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_remainderf_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_rhypotf_scalar(T * x, T * y, int n)
+{    
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rhypot_scalar_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);        
+    return output;
+}
+
+template<typename T> T* vector_cbrtf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);    
+    vector_cbrtf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_copysignf(T * X, T *Y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_copysignf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(X,Y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_cospif(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_cospif_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_cyl_bessel_i0f(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_cyl_bessel_i0f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_cyl_bessel_i1f(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_cyl_bessel_i1f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_erfcf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_erfcf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_erfcinvf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_erfcinvf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_erfcxf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_erfcxf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_erff(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_erff_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_erfinvf(T * devPtr, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_erfinvf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(devPtr,output,n);
+    return output;
+}
+
+template<typename T> T* vector_fdimf(T * a, T * b, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdimf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,output,n);
+    return output;
+}
+
+
+template<typename T> T* vector_fdividef(T * a, T * b, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdividef_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,output,n);
+    return output;
+}
+
+
+template<typename T> T* vector_fmaf(T * x, T * y, T * z, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fmaf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,z,output,n);
+    return output;
+}
+
+template<typename T> T* vector_hypotf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_hypotf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_ilogbf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_ilogbf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_j0f(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_j0f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_j1f(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_j1f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_jnf(T * x, int M, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_jnf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,M,output,n);
+    return output;
+}
+
+template<typename T> T* vector_ldexpf(T * x, int exp, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_ldexpf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,exp,output,n);
+    return output;
+}
+
+template<typename T> T* vector_lgammaf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_lgammaf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_nearbyintf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_nearbyintf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+
+template<typename T> T* vector_norm3df(T * x, T * y, T * z, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));   
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_norm3df_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,z,output,n);
+    return output;
+}
+
+template<typename T> T* vector_norm4df(T * x, T * y, T * z, T * q, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_norm4df_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,z,q,output,n);
+    return output;
+}
+
+template<typename T> T* vector_normcdff(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_normcdff_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_normcdfinvf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_normcdfinvf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> complex<T>* vector_normf(complex<T> * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(complex<T>));   
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_normf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_normf(int dim, T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));   
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_normf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(dim,x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_rcbrtf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rcbrtf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_remainderf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_remainderf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_rhypotf(T * x, T * y, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rhypotf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,output,n);
+    return output;
+}
+
+template<typename T> T* vector_rnorm3df(T * x, T * y, T * z, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rnorm3df_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,z,output,n);
+    return output;
+}
+
+template<typename T> T* vector_rnorm4df(T * x, T * y, T * z, T * q, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rnorm4df_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,z,q,output,n);
+    return output;
+}
+
+template<typename T> T* vector_rnormf(int dim, T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rnormf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(dim,x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_scalblnf(T * x, long int M, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_scalblnf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,M,output,n);
+    return output;
+}
+
+template<typename T> T* vector_sinpif(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_sinpif_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_tgammaf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_tgammaf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_truncf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_truncf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_y0f(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_y0f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_y1f(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_y1f_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_ynf(int M, T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_ynf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(M,x,output,n);
+    return output;
+}
+
+template<typename T> T* vector_fdimf_const(T * a, T  b, int n)
+{
+    T * p = find_memory<T>(n);    
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdimf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_fdividef_const(T * a, T b, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdividef_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_hypotf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_hypotf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_remainderf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_remainderf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+template<typename T> T* vector_rhypotf_const(T * x, T y, int n)
+{
+    T * p = find_memory<T>(n);
+    if(p == NULL)
+        cudaMalloc((void**)&p,sizeof(T)*n);
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_rhypotf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,y,p,n);    
+    return p;
+}
+
+
+template float* _2d_mulf(float * a, float * b, int M, int N);
+template float* _2d_addf(float * a, float * b, int M, int N);
+template float* _2d_subf(float * a, float * b, int M, int N);
+template float* _2d_divf(float * a, float * b, int M, int N);
+template float* _2d_modf(float * a, float * b, int M, int N);
+
+template float* matrix_transposef(float * input, int M, int N);
+template float* matrix_hadamardf(float * a, float * b, int M, int N, int K);
+template float* matrix_multiplyf(float * a, float * b, int M, int N, int K);
+template float* matrix_addf(float * a, float * b, int M, int N, int K);
+template float* matrix_subf(float * a, float * b, int M, int N, int K);
+template float* matrix_acosf(float * input, int M, int N);
+template float* matrix_asinf(float * input, int M, int N);
+template float* matrix_atanf(float * input, int M, int N);
+template float* matrix_atan2f(float * x, float * y, int M, int N);
+template float* matrix_cosf(float * input, int M, int N);
+template float* matrix_sinf(float * input, int M, int N);
+template float* matrix_tanf(float * input, int M, int N);
+template float* matrix_acoshf(float * input, int M, int N);
+template float* matrix_asinhf(float * input, int M, int N);
+template float* matrix_atanhf(float * input, int M, int N);
+template float* matrix_coshf(float * input, int M, int N);
+template float* matrix_sinhf(float * input, int M, int N);
+template float* matrix_tanhf(float * input, int M, int N);
+template float* matrix_ceilf(float * devPtr, int M, int N);
+template float* matrix_exp10f(float * devPtr, int M, int N);
+template float* matrix_exp2f(float * devPtr, int M, int N);
+template float* matrix_expf(float * devPtr, int M, int N);
+template float* matrix_expm1f(float * devPtr,int M, int N);
+template float* matrix_fabsf(float * devPtr,int M, int N);
+template float* matrix_floorf(float * devPtr,int M, int N);
+template float* matrix_fmaxf(float * x, float * y, int M, int N);
+template float* matrix_fminf(float * x, float * y,int M, int N);
+template float* matrix_fmodf(float * x, float * y,int M, int N);
+template float* matrix_log10f(float * x, int M, int N);
+template float* matrix_log1pf(float * x, int M, int N);
+template float* matrix_log2f(float * x, int M, int N);
+template float* matrix_logbf(float * x, int M, int N);
+template float* matrix_powf(float * x, float * y, int M, int N);
+template float* matrix_rsqrtf(float * x, int M, int N);
+template float* matrix_sqrtf(float * x, int M, int N);
+template float* matrix_sigmoidf(float * devPtr,int M, int N);
+template float* matrix_sigmoid_gradf(float * devPtr, int M, int N);
+template float* matrix_tanh_gradf(float * devPtr, int M, int N);
+template float* matrix_reluf(float * devPtr, int M, int N);
+template float* matrix_relu_gradf(float * devPtr, int M, int N);
+template float* matrix_softmaxf(float * x, int M, int N);
+template float* matrix_cbrtf(float * devPtr, int M, int N);
+template float* matrix_cospif(float * devPtr, int M, int N);
+template float* matrix_cyl_bessel_i0f(float * devPtr, int M, int N);
+template float* matrix_cyl_bessel_i1f(float * devPtr, int M, int N);
+template float* matrix_erfcf(float * devPtr,int M, int N);
+template float* matrix_erfcinvf(float * devPtr,int M, int N);
+template float* matrix_erfcxf(float * devPtr, int M, int N);
+template float* matrix_erff(float * devPtr, int M, int N);
+template float* matrix_erfinvf(float * devPtr, int M, int N);
+template float* matrix_fdimf(float * a, float * b, int M, int N);
+template float* matrix_fdividef(float * a, float * b, int M, int N);
+template float* matrix_fmaf(float * x, float * y, float * z, int M, int N);
+template float* matrix_hypotf(float * x, float * y,int M, int N);
+template float* matrix_ilogbf(float * x,int M, int N);
+template float* matrix_j0f(float * x,int M, int N);
+template float* matrix_j1f(float * x,int M, int N);
+template float* matrix_jnf(float * x, int n, int M, int N);
+template float* matrix_ldexpf(float * x, int exp, int M, int N);
+template float* matrix_lgammaf(float * x, int M, int N);
+template float* matrix_nearbyintf(float * x, int m, int n);
+template float* matrix_norm3df(float * x, float * y, float * z, int M, int N);
+template float* matrix_norm4df(float * x, float * y, float * z, float * q, int M, int N);
+template float* matrix_normcdff(float * x,int M, int N);
+template float* matrix_normcdfinvf(float * x,int M, int N);
+template float* matrix_normf(int dim, float * x, int M, int N);
+template float* matrix_remainderf(float * x, float * y,int M, int N);
+template float* matrix_rcbrtf(float * x,int M, int N);
+template float* matrix_rhypotf(float * x, float * y,int M, int N);
+template float* matrix_rnorm3df(float * x, float * y, float * z,int M, int N);
+template float* matrix_rnorm4df(float * x, float * y, float * z, float * q, int M, int N);
+template float* matrix_rnormf(int dim, float * x, int M, int N);
+template float* matrix_scalblnf(float * x, long int n, int M, int N);
+template float* matrix_sinpif(float * x, int M, int N);
+template float* matrix_tgammaf(float * x, int M, int N);
+template float* matrix_y0f(float * x, int M, int N);
+template float* matrix_y1f(float * x, int M, int N);
+template float* matrix_ynf(int n, float * x, int M, int N);
+template float* matrix_addf_const(float * x, float  y, int M, int N);
+template float* matrix_subf_const(float * x, float  y, int M, int N);
+template float* matrix_mulf_const(float * x, float  y, int M, int N);
+template float* matrix_divf_const(float * x, float  y, int M, int N);
+template float* matrix_modf_const(float * x, float  y, int M, int N);
+template float* matrix_atan2f_const(float * a, float b, int M, int N);
+template float* matrix_fmaxf_const(float * x, float  y, int M, int N);
+template float* matrix_fminf_const(float * x, float  y, int M, int N);
+template float* matrix_fmodf_const(float * x, float  y, int M, int N);
+template float* matrix_powf_const(float * x, float y, int M, int N);
+template float* matrix_fdimf_const(float * a, float  b, int M, int N);
+template float* matrix_fdividef_const(float * a, float  b, int M, int N);
+template float* matrix_hypotf_const(float * x, float  y, int M, int N);
+template float* matrix_remainderf_const(float * x, float y, int M, int N);
+template float* matrix_rhypotf_const(float * x, float y,int M, int N);
+template float* matrix_addf_scalar(float * x, float * y, int M, int N);
+template float* matrix_subf_scalar(float * x, float * y, int M, int N);
+template float* matrix_mulf_scalar(float * x, float * y, int M, int N);
+template float* matrix_divf_scalar(float * x, float * y, int M, int N);
+template float* matrix_modf_scalar(float * x, float * y, int M, int N);
+template float* matrix_atan2f_scalar(float * a, float *b, int M, int N);
+template float* matrix_fmaxf_scalar(float * x, float *y, int M, int N);
+template float* matrix_fminf_scalar(float * x, float *y, int M, int N);
+template float* matrix_fmodf_scalar(float * x, float *y, int M, int N);
+template float* matrix_powf_scalar(float * x, float *y, int M, int N);
+template float *matrix_fdimf_scalar(float * x, float *y, int M, int N);
+template float *matrix_fdividef_scalar(float * x, float *y, int M, int N);
+template float *matrix_hypotf_scalar(float * x, float *y,  int M, int N);
+template float* matrix_remainderf_scalar(float * x, float *y, int M, int N);
+template float* matrix_rhypotf_scalar(float * x, float *y, int M, int N);
+template float* matrix_copysignf(float * X, float *Y, int M, int N);
+template float* matrix_truncf(float * x, int M, int N);
+
+/*
+std::map<std::string,matrix_kernel1> matrix_map1;
+std::map<std::string,matrix_kernel2> matrix_map2;
+std::map<std::string,matrix_kernel3> matrix_map3;
+std::map<std::string,matrix_kernel4> matrix_map4;
+
+void register_matrix_kernel1(const char * name, matrix_kernel1 kernel) {
+    // should assert if already exist?
+    matrix_map1[name] = kernel;
+}
+void register_matrix_kernel2(const char * name, matrix_kernel2 kernel) {
+    matrix_map2[name] = kernel;
+}
+void register_matrix_kernel3(const char * name, matrix_kernel3 kernel) {
+    matrix_map3[name] = kernel;
+}
+void register_matrix_kernel4(const char * name, matrix_kernel4 kernel) {
+    matrix_map4[name] = kernel;
+}
+T* execute_matrix_kernel1(const char * name, T * x, int n) {
+    typename std::map<std::string,matrix_kernel1>::iterator i = matrix_map1.find(name);
+    // assert or return NULL?
+    if(i == matrix_map1.end()) return NULL;
+    return (i->second)(x,n);
+}
+T* execute_matrix_kernel2(const char * name, T * x, T * y, int n) {
+    typename std::map<std::string,matrix_kernel2>::iterator i = matrix_map2.find(name);
+    // assert or return NULL?
+    if(i == matrix_map2.end()) return NULL;
+    return (i->second)(x,y,n);
+}
+T* execute_matrix_kernel3(const char * name, T * x, T * y, T * z, int n) {
+    typename std::map<std::string,matrix_kernel3>::iterator i = matrix_map3.find(name);
+    // assert or return NULL?
+    if(i == matrix_map3.end()) return NULL;
+    return (i->second)(x,y,z,n);
+}
+T* execute_matrix_kernel4(const char * name, T * x, T * y, T * z, T * w, int n) {
+    typename std::map<std::string,matrix_kernel4>::iterator i = matrix_map4.find(name);
+    // assert or return NULL?
+    if(i == matrix_map4.end()) return NULL;
+    return (i->second)(x,y,z,w,n);
+}
+*/
+
+template<typename T> T* _2d_addf(T * a, T * b, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_2d_addf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N);
+    return output;
+}
+
+template<typename T> T* _2d_mulf(T * a, T * b, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_2d_mulf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N);
+    return output;
+}
+
+
+
+template<typename T>
+T* _2d_subf(T * a, T * b, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_2d_subf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* _2d_divf(T * a, T * b, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_2d_divf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N);
+    return output;
+}
+
+template<typename T>  T * _2d_modf(T * a, T * b, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_2d_modf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_addf(T * a, T * b, int M, int N, int K)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (K + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_matrix_addf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N,K);
+    return output;
+}
+
+template<typename T>  T* matrix_subf(T * a, T * b, int M, int N, int K)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (K + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_matrix_subf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N,K);
+    return output;
+}
+
+template<typename T>  T* matrix_hadamardf(T * a, T * b, int M, int N, int K)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (K + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_matrix_hadamardf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N,K);
+    return output;
+}
+
+template<typename T>  T* matrix_multiplyf(T * a, T * b, int M, int N, int K)
+{
+    T * output = find_memory<T>(M*K);
+    if(output == NULL) cudaMalloc((void**)&output,M*K*sizeof(T));
+    int BLOCK_SIZE=16;
+    if( N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (K + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_rows,grid_cols);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_multiplyf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(a,b,output,M,N,K);
+    return output;
+}
+
+template<typename T>  T* matrix_transposef(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    gpu_matrix_transposef<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_softmaxf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);
+    T sum = vector_sumf(input,M*N);
+    gpu_matrix_softmaxf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,sum,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_acosf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_acosf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_asinf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_asinf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_atanf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_atanf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_atan2f(T * x, T * y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_atan2f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_cosf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_cosf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_sinf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_sinf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_tanf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_tanf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+
+template<typename T>  T* matrix_coshf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_coshf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_coshf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_coshf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_tanhf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_tanhf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_acoshf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_acoshf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>  T* matrix_acoshf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_acoshf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_atanhf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_atanhf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+
+
+template<typename T>
+T* matrix_ceilf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_ceilf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_ceilf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_ceilf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_ceilf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_ceilf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_expf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);        
+    gpu_matrix_expf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);    
+    return output;
+}
+
+template<typename T>
+T* matrix_expm1f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_expm1f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_fabsf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fabsf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+
+template<typename T>
+T* matrix_floorf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));   
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_floorf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_floorf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));   
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_floorf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_fminf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fminf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_fmodf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fmodf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_fmodf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fmodf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_log1pf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_log1pf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_log2f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_log2f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;    
+}
+
+template<typename T> 
+T* matrix_logbf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_logbf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_powf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_powf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_rsqrtf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_rsqrtf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_sqrtf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_sqrtf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_sigmoidf(T * x, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));             
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);       
+    matrix_sigmoid_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,output,M,N);        
+    return output;
+}
+
+template<typename T> 
+T* matrix_sigmoid_gradf(T * x, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_sigmoid_grad_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,output,M,N);        
+    return output;
+}
+
+
+
+template<typename T> 
+T* matrix_sigmoid_gradf(T * x, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_sigmoid_grad_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,output,M,N);        
+    return output;
+}
+
+template<typename T> 
+T* matrix_reluf(T * x, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_relu_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,output,M,N);        
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_addf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_add_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_addf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_add_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_mulf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+    //if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;    
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_mul_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_divf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    assert(y != 0.0f);    
+    int BLOCK_SIZE=16;
+    // if(N < 1024) BLOCK_SIZE=N;    
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_div_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_modf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_mod_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_atan2f_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_atan2f_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+
+template<typename T> 
+T* matrix_fmaxf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fmaxf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_fminf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fminf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_fmodf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fmodf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_powf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_powf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_addf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_add_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_subf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_add_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_mulf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_mul_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_divf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_div_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_modf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_mod_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_fmaxf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fmax_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_fminf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fmin_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_powf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_pow_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_hypotf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_hypot_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_rhypotf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_rhypot_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_fdividef_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fdividef_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_fmodf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fmodf_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_remainderf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_remainderf_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_fdimf_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fdimf_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_atan2f_scalar(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_atan2f_scalar_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> T* matrix_cbrtf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_cbrtf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_cospif(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_cospif<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_cyl_bessel_i0f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_cyl_bessel_i0f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_cyl_bessel_i1f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_cyl_bessel_i1f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_erfcf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_erfcf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_erfcinvf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_erfcinvf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_erfcxf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_erfcxf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_erff(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_erff<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_erfinvf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_erfinvf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_fdimf(T * x, T * y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fdimf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_fdividef(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fdividef<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T>
+T* matrix_fmaf(T * x, T *y, T *z, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_fmaf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,z,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_hypotf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_hypotf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_ilogbf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_ilogbf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_j0f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_j0f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> T* matrix_j1f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_j1f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_jnf(T * input, int n, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_jnf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,n,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_ldexpf(T * input, int exp, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_ldexpf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,exp,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_lgammaf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_lgammaf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_copysignf(T * X, T *Y, int M , int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_copysign<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(X,Y,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_nearbyintf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_nearbyintf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_norm3df(T * x, T *y, T *z, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_norm3df<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,z,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_norm4df(T * x, T *y, T *z, T * w, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_norm4df<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,z,w,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_normcdff(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_normcdff<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_normcdfinvf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_normcdfinvf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_normf(int dim, T *input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_normf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(dim,input,output,M,N);
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_remainderf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_remainderf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_rcbrtf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_rcbrtf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_rhypotf(T * x, T *y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_rhypotf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_rnorm3df(T * x, T *y, T *z, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_rnorm3df<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,z,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_rnorm4df(T * x, T *y, T *z, T *w, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_rnorm4df<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,z,w,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_rnormf(int dim, T *input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_rnormf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(dim,input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_scalblnf(T * input, long int n, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_scalblnf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,n,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_sinpif(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_sinpif<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_tgammaf(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_tgammaf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_y0f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_y0f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_y1f(T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_y1f<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_ynf(int n, T * input, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    gpu_matrix_ynf<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(n,input,output,M,N);
+    return output;
+}
+
+template<typename T> 
+T* matrix_fdimf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fdimf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_fdividef_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_fdividef_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_hypotf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_hypotf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+
+template<typename T> 
+T* matrix_remainderf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_remainderf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+template<typename T> 
+T* matrix_rhypotf_const(T * x, T y, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));
+    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_rhypotf_const_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,y,output,M,N);    
+    return output;
+}
+
+
+template<typename T> 
+T* matrix_truncf(T * x, int M, int N)
+{
+    T * output = find_memory<T>(M*N);
+    if(output == NULL) cudaMalloc((void**)&output,M*N*sizeof(T));    
+    int BLOCK_SIZE=16;
+   // if(N < 1024) BLOCK_SIZE=N;
+    unsigned int grid_rows = (M + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    unsigned int grid_cols = (N + BLOCK_SIZE - 1) / BLOCK_SIZE;
+    dim3 dimGrid(grid_cols, grid_rows);
+    dim3 dimBlock(BLOCK_SIZE, BLOCK_SIZE);    
+    matrix_truncf_device<<<dimGrid,dimBlock,0,get_cuda_stream()>>>(x,output,M,N);
+    return output;
+}
+
+
+template<typename T> void vector_r_fdimf_const(T * a, T  b, T * output, int n)
+{
+    T * p = find_memory<T>(n);        
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_fdimf_const_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(a,b,output,n);        
+}
+
+
+
+template<typename T> T* vector_logbf(T * x, int n)
+{
+    T * output = find_memory<T>(n);
+    if(output == NULL) cudaMalloc((void**)&output,n*sizeof(T));    
+    int gridSize,blockSize;
+    calcSize(n,&gridSize,&blockSize);        
+    vector_logbf_device<<<gridSize,blockSize,0,get_cuda_stream()>>>(x,output,n);
+    return output;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

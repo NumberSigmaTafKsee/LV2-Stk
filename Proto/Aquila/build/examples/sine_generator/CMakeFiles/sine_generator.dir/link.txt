@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -fPIC -march=native -std=gnu++0x -rdynamic CMakeFiles/sine_generator.dir/sine_generator.cpp.o -o sine_generator  ../../libAquila.a ../../lib/libOoura_fft.a 

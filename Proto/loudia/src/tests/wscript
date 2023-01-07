@@ -1,0 +1,21 @@
+#! /usr/bin/env python
+# encoding: utf-8
+# Ricard Marxer 2008
+
+def options(opt):
+	opt.load('g++')
+
+def configure(conf):
+	conf.load('g++')
+        
+def build(bld):
+        bld(
+                features = ['cxx', 'cprogram'],
+                uselib = 'fftw3',
+                source = 'test_addon.cpp',
+                target = 'test_addon',
+                includes = '.. ../../externals',
+                uselib_local = 'loudia'
+        )
+        
+        

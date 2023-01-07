@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -fPIC -march=native -std=gnu++0x -rdynamic CMakeFiles/square_generator.dir/square_generator.cpp.o -o square_generator  ../../libAquila.a ../../lib/libOoura_fft.a 

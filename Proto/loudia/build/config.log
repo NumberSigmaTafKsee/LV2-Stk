@@ -1,0 +1,192 @@
+# project loudia (0.1-dev) configured on Wed Dec 14 10:10:06 2022 by
+# waf 1.8.0 (abi 98, python 20712f0 on linux2)
+# using waf configure /usr/local
+#
+----------------------------------------
+Setting top to
+/home/quake/Projects/Cell5/Analyzer/loudia
+----------------------------------------
+Setting out to
+/home/quake/Projects/Cell5/Analyzer/loudia/build
+----------------------------------------
+Checking for 'g++' (C++ compiler)
+find program=['g++', 'c++'] paths=['/opt/intel/oneapi/vtune/2022.1.0/bin64', '/opt/intel/oneapi/mpi/2021.5.1//libfabric/bin', '/opt/intel/oneapi/mpi/2021.5.1//bin', '/opt/intel/oneapi/mkl/2022.0.2/bin/intel64', '/opt/intel/oneapi/intelpython/latest/bin', '/opt/intel/oneapi/intelpython/latest/condabin', '/opt/intel/oneapi/dpcpp-ct/2022.0.0/bin', '/opt/intel/oneapi/dev-utilities/2021.5.2/bin', '/opt/intel/oneapi/debugger/2021.5.0/gdb/intel64/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/lib/oclfpga/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin', '/opt/intel/oneapi/advisor/2022.0.0/bin64', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
+find program=['ar'] paths=['/opt/intel/oneapi/vtune/2022.1.0/bin64', '/opt/intel/oneapi/mpi/2021.5.1//libfabric/bin', '/opt/intel/oneapi/mpi/2021.5.1//bin', '/opt/intel/oneapi/mkl/2022.0.2/bin/intel64', '/opt/intel/oneapi/intelpython/latest/bin', '/opt/intel/oneapi/intelpython/latest/condabin', '/opt/intel/oneapi/dpcpp-ct/2022.0.0/bin', '/opt/intel/oneapi/dev-utilities/2021.5.2/bin', '/opt/intel/oneapi/debugger/2021.5.0/gdb/intel64/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/lib/oclfpga/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin', '/opt/intel/oneapi/advisor/2022.0.0/bin64', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+/usr/bin/g++
+----------------------------------------
+Checking for program 'pkg-config'
+['/usr/bin/pkg-config']
+find program=['pkg-config'] paths=['/opt/intel/oneapi/vtune/2022.1.0/bin64', '/opt/intel/oneapi/mpi/2021.5.1//libfabric/bin', '/opt/intel/oneapi/mpi/2021.5.1//bin', '/opt/intel/oneapi/mkl/2022.0.2/bin/intel64', '/opt/intel/oneapi/intelpython/latest/bin', '/opt/intel/oneapi/intelpython/latest/condabin', '/opt/intel/oneapi/dpcpp-ct/2022.0.0/bin', '/opt/intel/oneapi/dev-utilities/2021.5.2/bin', '/opt/intel/oneapi/debugger/2021.5.0/gdb/intel64/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/lib/oclfpga/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin', '/opt/intel/oneapi/advisor/2022.0.0/bin64', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+------------------------------------------
+Checking for pkg-config version >= '0.0.0'
+['/usr/bin/pkg-config', '--atleast-pkgconfig-version=0.0.0']
+yes
+-------------------------------------------------------------
+Checking for 'libavformat libavcodec libavresample libavutil'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'libavformat', 'libavcodec', 'libavresample', 'libavutil']
+out: -I/usr/include/x86_64-linux-gnu -lavformat -lavcodec -lavresample -lavutil
+
+yes
+-------------------------------------------------------------
+Checking for 'fftw3 fftw3f fftw3l'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'fftw3', 'fftw3f', 'fftw3l']
+out: -lfftw3 -lfftw3f -lfftw3l
+
+yes
+-------------------------------------------------------------
+Checking for 'samplerate'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'samplerate']
+out: -lsamplerate
+
+yes
+-------------------------------------------------------------
+Checking for 'eigen3'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'eigen3']
+out: -I/usr/local/include/eigen3
+
+yes
+(tool compiler_cxx is already loaded, skipping)
+-------------------------------------------------------------
+Checking for program 'python'
+['/usr/bin/python2']
+find program=['python'] paths=['/opt/intel/oneapi/vtune/2022.1.0/bin64', '/opt/intel/oneapi/mpi/2021.5.1//libfabric/bin', '/opt/intel/oneapi/mpi/2021.5.1//bin', '/opt/intel/oneapi/mkl/2022.0.2/bin/intel64', '/opt/intel/oneapi/intelpython/latest/bin', '/opt/intel/oneapi/intelpython/latest/condabin', '/opt/intel/oneapi/dpcpp-ct/2022.0.0/bin', '/opt/intel/oneapi/dev-utilities/2021.5.2/bin', '/opt/intel/oneapi/debugger/2021.5.0/gdb/intel64/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/lib/oclfpga/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin', '/opt/intel/oneapi/advisor/2022.0.0/bin64', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python2']
+['/usr/bin/python2', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+out: 2
+7
+18
+final
+0
+
+['/usr/bin/python2', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0) or ''))"]
+out: '/usr/lib/python2.7/dist-packages'
+
+'/usr/lib/python2.7/dist-packages'
+
+['/usr/bin/python2', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0) or ''))"]
+out: '/usr/lib/python2.7/dist-packages'
+
+'/usr/lib/python2.7/dist-packages'
+
+-------------------------------------------------------------
+Checking for python version
+(2, 7, 18, 'final', 0)
+['/usr/bin/python2', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
+out: '/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+''
+
+'/usr'
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
+'/usr/lib'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
+1
+''
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '
+''
+
+Configuration returned from ['/usr/bin/python2']:
+"prefix = '/usr'\nSO = '.so'\nLDFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro'\nLIBDIR = '/usr/lib'\nLIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'\nINCLUDEPY = '/usr/include/python2.7'\nPy_ENABLE_SHARED = 1\nMACOSX_DEPLOYMENT_TARGET = ''\nLDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '\nCFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=. -fstack-protector-strong -Wformat -Werror=format-security  '\nLDVERSION = ''"
+
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+-------------------------------------------------------------
+Checking for library python2.7 in LIBDIR
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_3b2479b91ea1f8aedc2bbc867fa4858e/test.cpp -> build/.conf_check_3b2479b91ea1f8aedc2bbc867fa4858e/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O3', '-fPIC', '-W', '-Wall', '-msse2', '-DNDEBUG', '-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong', '-DHAVE_FFMPEG=1', '-DHAVE_FFTW3=1', '-DHAVE_SAMPLERATE=1', '-DHAVE_EIGEN=1', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/quake/Projects/Cell5/Analyzer/loudia/build/.conf_check_3b2479b91ea1f8aedc2bbc867fa4858e/testbuild/test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_3b2479b91ea1f8aedc2bbc867fa4858e/testbuild/test.cpp.1.o -> build/.conf_check_3b2479b91ea1f8aedc2bbc867fa4858e/testbuild/testprog
+[0m
+['/usr/bin/g++', '-lm', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/quake/Projects/Cell5/Analyzer/loudia/build/.conf_check_3b2479b91ea1f8aedc2bbc867fa4858e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+yes
+-------------------------------------------------------------
+python-config
+not found
+find program=['/usr/bin/python2-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/opt/intel/oneapi/vtune/2022.1.0/bin64', '/opt/intel/oneapi/mpi/2021.5.1//libfabric/bin', '/opt/intel/oneapi/mpi/2021.5.1//bin', '/opt/intel/oneapi/mkl/2022.0.2/bin/intel64', '/opt/intel/oneapi/intelpython/latest/bin', '/opt/intel/oneapi/intelpython/latest/condabin', '/opt/intel/oneapi/dpcpp-ct/2022.0.0/bin', '/opt/intel/oneapi/dev-utilities/2021.5.2/bin', '/opt/intel/oneapi/debugger/2021.5.0/gdb/intel64/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/lib/oclfpga/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin', '/opt/intel/oneapi/advisor/2022.0.0/bin64', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> None
+from /home/quake/Projects/Cell5/Analyzer/loudia/src/swig: Could not find the program /usr/bin/python2-config,python2.7-config,python-config-2.7,python2.7m-config
+Include path for Python extensions (found via distutils module): '/usr/include/python2.7'
+
+-------------------------------------------------------------
+Checking for header Python.h
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/test.cpp -> build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/test.cpp.1.o
+[0m
+['/usr/bin/g++', '-O3', '-fPIC', '-W', '-Wall', '-msse2', '-DNDEBUG', '-fno-strict-aliasing', '-fwrapv', '-fdebug-prefix-map=/build/python2.7-W1mjrO/python2.7-2.7.18=.', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DHAVE_FFMPEG=1', '-DHAVE_FFTW3=1', '-DHAVE_SAMPLERATE=1', '-DHAVE_EIGEN=1', '-DPYTHONDIR="/usr/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/quake/Projects/Cell5/Analyzer/loudia/build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/test.cpp.1.o']
+[2/2] [33mcxxprogram: build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/test.cpp.1.o -> build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/testprog
+[0m
+['/usr/bin/g++', '-lm', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/quake/Projects/Cell5/Analyzer/loudia/build/.conf_check_1f933b02106127ce3a9f4633a0e368e7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+yes
+-------------------------------------------------------------
+Checking for 'fftw3 fftw3f fftw3l'
+['/usr/bin/pkg-config', 'fftw3', 'fftw3f', 'fftw3l']
+yes
+-------------------------------------------------------------
+Checking for 'samplerate'
+['/usr/bin/pkg-config', 'samplerate']
+yes
+-------------------------------------------------------------
+Checking for 'eigen3'
+['/usr/bin/pkg-config', 'eigen3']
+yes
+-------------------------------------------------------------
+Checking for program 'swig'
+['/usr/local/bin/swig']
+find program=['swig'] paths=['/opt/intel/oneapi/vtune/2022.1.0/bin64', '/opt/intel/oneapi/mpi/2021.5.1//libfabric/bin', '/opt/intel/oneapi/mpi/2021.5.1//bin', '/opt/intel/oneapi/mkl/2022.0.2/bin/intel64', '/opt/intel/oneapi/intelpython/latest/bin', '/opt/intel/oneapi/intelpython/latest/condabin', '/opt/intel/oneapi/dpcpp-ct/2022.0.0/bin', '/opt/intel/oneapi/dev-utilities/2021.5.2/bin', '/opt/intel/oneapi/debugger/2021.5.0/gdb/intel64/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/lib/oclfpga/bin', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64', '/opt/intel/oneapi/compiler/2022.0.2/linux/bin', '/opt/intel/oneapi/advisor/2022.0.0/bin64', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/home/quake/bin', '/usr/local/cuda/bin', '/home/quake/.local/bin', '/home/quake/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SWIG' -> ['/usr/local/bin/swig']
+['/usr/local/bin/swig', '-version']
+out: 
+SWIG Version 4.1.0
+
+Compiled with /usr/bin/c++ [Linux]
+
+Configured options: +pcre
+
+Please see http://www.swig.org for reporting bugs and further information
+
+-------------------------------------------------------------
+Checking for swig version
+4.1.0
+-------------------------------------------------------------
+Checking for python module 'numpy'
+['/usr/bin/python2', '-c', "\nimport numpy as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+out: 1.16.5
+
+1.16.5

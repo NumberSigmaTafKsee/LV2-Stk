@@ -1,0 +1,66 @@
+#! /usr/bin/env python
+# encoding: utf-8
+# Ricard Marxer 2008
+
+from waflib import Options
+import os, os.path
+
+LIBNAME = 'loudia'
+LIBVERSION = '1.0.0'
+
+def options(opt):
+        opt.load('compiler_cxx')
+
+        opt.recurse('swig')
+        opt.recurse('tests')
+
+def pkgconf(lib, what = '--cflags'):
+        return os.popen('pkg-config %s %s' % (lib, what)).read().strip()
+
+
+def configure(conf):
+        conf.load('compiler_cxx')
+        conf.check_cfg(atleast_pkgconfig_version='0.0.0')
+        conf.check_cfg(package='libavformat libavcodec libavresample libavutil', uselib_store='FFMPEG', args=['--cflags', '--libs'])
+        conf.check_cfg(package='fftw3 fftw3f fftw3l', uselib_store='FFTW3', args=['--cflags', '--libs'], errmsg='FFTW not found. No FFT support.')
+        conf.check_cfg(package='samplerate', uselib_store='SAMPLERATE', args=['--cflags', '--libs'], mandatory=True)
+        conf.check_cfg(package='eigen3', uselib_store='EIGEN', args=['--cflags', '--libs'], mandatory=True)
+        
+        if conf.env['option_debug']:
+                conf.env.append_value('CXXFLAGS', '-g')
+                conf.env.append_value('CXXFLAGS','-fno-inline')
+                conf.env.append_value('CXXFLAGS','-W')
+                conf.env.append_value('CXXFLAGS','-Wall')
+        else:
+                conf.env.append_value('CXXFLAGS', '-O3')
+                conf.env.append_value('CXXFLAGS','-fPIC')
+                conf.env.append_value('CXXFLAGS','-W')
+                conf.env.append_value('CXXFLAGS','-Wall')
+                conf.env.append_value('CXXFLAGS','-msse2')
+                conf.env.append_value('CXXFLAGS','-DNDEBUG')
+
+        conf.env.append_value('LINKFLAGS', '-lm')
+
+        if not conf.env['option_no_python_bindings']:
+                conf.recurse('swig')
+
+        if conf.env['option_cpptests']:
+                conf.recurse('tests')
+
+def build(bld):
+        bld(features = 'cxx cxxshlib',
+            uselib = 'FFTW3 FFMPEG SAMPLERATE EIGEN',
+            source = bld.path.ant_glob('*.cpp'),
+            target = LIBNAME,
+            export_incdirs = '.',
+            includes = '.',
+            name = LIBNAME,
+            vnum = LIBVERSION)
+
+        if not bld.env['option_no_python_bindings']:
+                bld.recurse('swig')
+
+        if bld.env['option_cpptests']:
+                bld.recurse('tests')
+
+        bld.install_files('${PREFIX}/include/loudia', bld.path.ant_glob('*.h'))
