@@ -420,13 +420,64 @@ namespace Lua
             value.print();
         }
     };
-    /*
-    struct LuaTableValue
-    {
-        LuaValue value;
-        LuaJIT&  lua;
-        std::string index;
-        int i;
+    
+    struct LuaTableValue : public LuaValue
+    {            
+        int index;
+        std::string table;
+        LuaJIT& lua;
+
+        LuaTableValue(LuaJIT& luajit, const std::string table, int i) : lua(luajit), table(name), index(i) {}
+        
+        
+        void setValue() {
+            lua.GetGlobal(table);
+            if(value.type == LuaValue::DOUBLE) lua.PushNumber(value.d);
+            else if(value.type == LuaValue::BOOL) lua.PushBool(value.b);
+            else lua.PushString(value.s);            
+            lua.rawseti(name,index);            
+        }
+        void updateValue() {
+            lua.GetGlobal(table);
+            lua.rawgeti(index);        
+            if(lua.isNumber()) value.setDouble(lua.asNumber());
+            else if(lua.isBool()) value.setBool(lua.asBool());
+            else value.setString(lua.asString());            
+            lua.Pop(1);
+        }
+        
+        LuaVariable& operator = (double v) {
+            value.setDouble(v);
+            setValue();
+            return *this;
+        }
+        LuaVariable& operator = (bool v) {
+            value.setBool(v);
+            setValue();
+            return *this;
+        }
+        LuaVariable& operator = (const string& v) {            
+            value.setString(v);            
+            setValue();
+            return *this;
+        }        
+        LuaVariable& operator = (const char * v) {            
+            value.setString(std::string(v));            
+            setValue();
+            return *this;
+        }        
+        LuaVariable& operator = (const LuaVariable& v) {
+            value = v.value;
+            name = v.name;
+            lua = v.lua;
+            setValue();
+            return *this;
+        }
+        LuaVariable& operator = (const LuaValue& v) {
+            value = v;
+            setValue();
+            return *this;
+        }
     };
 
     struct LuaTable
@@ -437,16 +488,9 @@ namespace Lua
         LuaTable(LuaJIT & l, const std::string& t) : lua(l),name(t) {}
 
         LuaTableValue operator[](size_t i) {
-            LuaTableValue v;
-            lua.GetGlobal(name);
-            v.rawgeti(lua,i);
-        }
-        LuaTableValue operator[](const std::string& i) {
-            LuaTableValue v;
-            lua.GetGlobal(name);
-            lua.PushString(i);
-            v.rawget(lua);
-        }
+            LuaTableValue v(lua,name,i);            
+            v.updateValue();
+            return v;
+        }        
     };
-    */
 }            
