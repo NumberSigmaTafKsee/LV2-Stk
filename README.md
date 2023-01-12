@@ -7,3 +7,8 @@
 # You will probably not find this useful for anything
 * I mostly hack things in here
 * Something to do with JOS theories
+
+# For Learning MusicDSP Theory
+* Stk   
+* Faust
+* Matlab/Octave
