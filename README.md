@@ -27,3 +27,14 @@
 
 # Computational Music Synthesis
 * https://cs.gmu.edu/~sean/book/synthesis/
+
+# Will Pirkin Theory
+* Designing Audio Effects
+* Designing Synthesizers
+
+# Zolzer DAFX Theory
+* DAFX Audio Effects
+
+# Reiss AudioFX Theory
+* Audio Effects Theory
+
