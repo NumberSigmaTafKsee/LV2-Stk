@@ -20,7 +20,7 @@
 * Physical Audio - https://ccrma.stanford.edu/~jos/pasp/
 
 # Perry Cook Theory
-* Real Sound Synthesis
+* Real Sound Synthesis - https://www.cs.princeton.edu/~prc/AKPetersBook.htm
 
 # Gary Scavone Theory
 * http://www.music.mcgill.ca/~gary/
