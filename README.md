@@ -29,12 +29,19 @@
 * https://cs.gmu.edu/~sean/book/synthesis/
 
 # Will Pirkin Theory
+* https://www.willpirkle.com/
 * Designing Audio Effects
 * Designing Synthesizers
+* Synthlab
 
 # Zolzer DAFX Theory
-* DAFX Audio Effects
+* DAFX Audio Effects - https://www.wiley.com/en-us/DAFX%3A+Digital+Audio+Effects%2C+2nd+Edition-p-9780470665992
 
 # Reiss AudioFX Theory
-* Audio Effects Theory
+* Audio Effects Theory - https://www.amazon.com/Audio-Effects-Theory-Implementation-Application/dp/1466560282
 
+# Hack Audio Theory
+* https://www.hackaudio.com/
+
+# FaustFX
+* https://faust.grame.fr/
