@@ -1,47 +1,19 @@
-# AudioLAB-STK
+# LV2-Stk
 
-# Purpose
-* To study the theory of Julius Orion Smith
-* To have a small c++ dsp that works easy on raspberry/pi
+# There is no explanation why you want this
+* It is a music library not an audio dsp library
+* You need gamma and something else with it
 
-# You will probably not find this useful for anything
-* I mostly hack things in here
-* Something to do with JOS theories
+# I have no idea if anyone uses this anymore
+* The new theory of machine audio intelligence is faust
 
-# For Learning MusicDSP Theory
-* Stk   
-* Faust
-* Matlab/Octave
+# You want to make a physical sound
+* It is like a flute
+* Yet it vibrates like the strings of a violin
 
-# Julius Orion Smith (JOS) Theory
-* DFT - https://ccrma.stanford.edu/~jos/mdft/
-* Filters - https://ccrma.stanford.edu/~jos/filters/filters.html
-* Spectral Audio - https://ccrma.stanford.edu/~jos/sasp/
-* Physical Audio - https://ccrma.stanford.edu/~jos/pasp/
+# In here are the blueprints of it
+* Now, you can combine them into a physical model graph
+* You will need Gamma to do the audiodsp and interpolation theory
+* You will need other things the machine learning theories
 
-# Perry Cook Theory
-* Real Sound Synthesis - https://www.cs.princeton.edu/~prc/AKPetersBook.htm
 
-# Gary Scavone Theory
-* http://www.music.mcgill.ca/~gary/
-
-# Computational Music Synthesis
-* https://cs.gmu.edu/~sean/book/synthesis/
-
-# Will Pirkin Theory
-* https://www.willpirkle.com/
-* Designing Audio Effects
-* Designing Synthesizers
-* Synthlab
-
-# Zolzer DAFX Theory
-* DAFX Audio Effects - https://www.wiley.com/en-us/DAFX%3A+Digital+Audio+Effects%2C+2nd+Edition-p-9780470665992
-
-# Reiss AudioFX Theory
-* Audio Effects Theory - https://www.amazon.com/Audio-Effects-Theory-Implementation-Application/dp/1466560282
-
-# Hack Audio Theory
-* https://www.hackaudio.com/
-
-# FaustFX
-* https://faust.grame.fr/
