@@ -108,12 +108,34 @@
 using namespace stk;
 using namespace stk;
 %}
-%ignore stk::Stk;
+//%ignore stk::Stk;
+%ignore stk::Stk::Stk();
+%ignore stk::Stk::~Stk();
 
 %include "stdint.i"
 %include "std_except.i"
 %include "std_vector.i"
+%include "std_string.i"
 %include "stk_core.i"
+
+// Handle standard exceptions
+%include "exception.i"
+%exception
+{
+  try
+  {
+    $action
+  }
+  catch (const std::invalid_argument& e)
+  {
+    SWIG_exception(SWIG_ValueError, e.what());
+  }
+  catch(const std::runtime_error& e) {
+    SWIG_exception(SWIG_ValueError, e.what());
+  }
+}
+
+%ignore stk::ModalBar::setModulationDepth;
 
 %include "adsr.i"
 %include "asymp.i"
@@ -160,6 +182,7 @@ using namespace stk;
 %include "midifilein.i"
 %include "modal.i"
 %include "modulate.i"
+%include "sampler.i"
 %include "moog.i"
 %include "nrev.i"
 %include "noise.i"
@@ -203,5 +226,3 @@ using namespace stk;
 %include "udpsocket.i"
 %include "rtwvin.i"
 %include "rtwvout.i"
-%include "sampler.i"
-

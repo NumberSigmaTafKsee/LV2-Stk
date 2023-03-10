@@ -137,7 +137,7 @@ namespace stk {
     const StkFloat ONE_OVER_128 ;
 
 
-    class Effect : public Stk
+    class Effect
     {
     public:
         
@@ -150,7 +150,7 @@ namespace stk {
     };
 
     
-    class Filter : public Stk
+    class Filter
     {
     public:
     
@@ -167,7 +167,7 @@ namespace stk {
         virtual StkFrames& tick( StkFrames& frames, unsigned int channel = 0 ) = 0;
     };
 
-    class Generator : public Stk
+    class Generator 
     {
     public:
         Generator( void );
@@ -177,7 +177,7 @@ namespace stk {
         virtual StkFrames& tick( StkFrames& frames, unsigned int channel = 0 ) = 0;
     };
 
-    class Instrmnt : public Stk
+    class Instrmnt 
     {
     public:
 
@@ -197,7 +197,7 @@ namespace stk {
         virtual StkFrames& tick( StkFrames& frames, unsigned int channel = 0 ) = 0;
     };
 
-    class Function : public Stk
+    class Function
     {
     public:
         Function( void );
@@ -205,7 +205,7 @@ namespace stk {
         virtual StkFloat tick( StkFloat input ) = 0;
     };
 
-    class FM : public Instrmnt
+    class FM 
     {
     public:
     

@@ -32,7 +32,7 @@ namespace stk
         static int writeBuffer(int socket, const void *buffer, long bufferSize, int flags );
         static int readBuffer(int socket, void *buffer, long bufferSize, int flags );
     };
-
+    /*
     class TcpClient : public Socket
     {
     public:
@@ -71,4 +71,5 @@ namespace stk
         int readBuffer(void *buffer, long bufferSize, int flags = 0);
         int writeBufferTo(const void *buffer, long bufferSize, int port, std::string hostname = "localhost", int flags = 0 );
     };
+    */
 }

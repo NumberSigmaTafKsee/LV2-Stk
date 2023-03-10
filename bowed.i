@@ -18,5 +18,6 @@ namespace stk{
         void noteOff( StkFloat amplitude );
         void controlChange( int number, StkFloat value );
         StkFloat tick( unsigned int channel = 0 );
+        StkFrames& tick( StkFrames& frames, unsigned int channel = 0 );
     };
 }

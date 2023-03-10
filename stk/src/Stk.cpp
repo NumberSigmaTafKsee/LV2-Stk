@@ -52,6 +52,8 @@
 
 #include "Stk.h"
 #include <stdlib.h>
+// fftw3 allocator is aligned
+#include <fftw3.h>
 
 namespace stk {
 
@@ -235,7 +237,9 @@ StkFrames :: StkFrames( unsigned int nFrames, unsigned int nChannels )
   bufferSize_ = size_;
 
   if ( size_ > 0 ) {
-    data_ = (StkFloat *) calloc( size_, sizeof( StkFloat ) );
+    //data_ = (StkFloat *) calloc( size_, sizeof( StkFloat ) );
+    data_ = (StkFloat *) fftw_malloc(size_*sizeof(StkFloat));
+    memset(data_,0x00,size*sizeof(StkFloat));
 #if defined(_STK_DEBUG_)
     if ( data_ == NULL ) {
       std::string error = "StkFrames: memory allocation error in constructor!";
@@ -253,7 +257,8 @@ StkFrames :: StkFrames( const StkFloat& value, unsigned int nFrames, unsigned in
   size_ = nFrames_ * nChannels_;
   bufferSize_ = size_;
   if ( size_ > 0 ) {
-    data_ = (StkFloat *) malloc( size_ * sizeof( StkFloat ) );
+    data_ = (StkFloat *) fftw_malloc(size_*sizeof(StkFloat));
+    memset(data_,0x00,size*sizeof(StkFloat));
 #if defined(_STK_DEBUG_)
     if ( data_ == NULL ) {
       std::string error = "StkFrames: memory allocation error in constructor!";
@@ -268,7 +273,8 @@ StkFrames :: StkFrames( const StkFloat& value, unsigned int nFrames, unsigned in
 
 StkFrames :: ~StkFrames()
 {
-  if ( data_ ) free( data_ );
+  if ( data_ ) 
+      fftw_free( data_ );
 }
 
 StkFrames :: StkFrames( const StkFrames& f )
@@ -281,7 +287,8 @@ StkFrames :: StkFrames( const StkFrames& f )
 
 StkFrames& StkFrames :: operator= ( const StkFrames& f )
 {
-  if ( data_ ) free( data_ );
+  if ( data_ ) 
+    fftw_free(data_);    
   data_ = 0;
   size_ = 0;
   bufferSize_ = 0;
@@ -295,11 +302,20 @@ void StkFrames :: resize( size_t nFrames, unsigned int nChannels )
 {
   nFrames_ = nFrames;
   nChannels_ = nChannels;
-
+  int oldSize = size_;
   size_ = nFrames_ * nChannels_;
   if ( size_ > bufferSize_ ) {
-    if ( data_ ) free( data_ );
-    data_ = (StkFloat *) malloc( size_ * sizeof( StkFloat ) );
+    
+    //data_ = (StkFloat *) malloc( size_ * sizeof( StkFloat ) );
+    StkFloat * tdata_;
+    tdata_ = (StkFloat *) fftw_malloc(size_*sizeof(StkFloat));
+    memset(tdata_,0x00,size*sizeof(StkFloat));
+    if(oldSize >= size_) oldSize = size_-1;
+    memcpy(tdata_,data_,oldSize*sizeof(StkFloat));
+    if ( data_ ) 
+        fftw_free( data_ );
+    data_ = tdata_;
+    
 #if defined(_STK_DEBUG_)
     if ( data_ == NULL ) {
       std::string error = "StkFrames::resize: memory allocation error!";

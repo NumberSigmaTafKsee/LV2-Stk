@@ -74,6 +74,8 @@ class BlitSaw: public Generator
   */
   StkFrames& tick( StkFrames& frames, unsigned int channel = 0 );
 
+  void ProcessSIMD(size_t n, StkFloat * out);
+
  protected:
 
   void updateHarmonics( void );
@@ -125,6 +127,27 @@ inline StkFloat BlitSaw :: tick( void )
 	return lastFrame_[0];
 }
 
+void BlitSaw::ProcessSIMD(size_t n, StkFloat * out)
+{
+  #pragma omp simd
+  for(size_t i = 0; i < n; i++)
+  {
+    StkFloat tmp, denominator = sin( phase_ );
+    if ( fabs(denominator) <= std::numeric_limits<StkFloat>::epsilon() )
+      tmp = a_;
+    else {
+      tmp =  sin( m_ * phase_ );
+      tmp /= p_ * denominator;
+    }
+
+    tmp += state_ - C2_;
+    state_ = tmp * 0.995;
+
+    phase_ += rate_;
+    if ( phase_ >= PI ) phase_ -= PI;
+    out[i] = tmp;  
+  }
+}
 inline StkFrames& BlitSaw :: tick( StkFrames& frames, unsigned int channel )
 {
 #if defined(_STK_DEBUG_)

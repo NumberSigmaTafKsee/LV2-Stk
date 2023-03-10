@@ -193,6 +193,23 @@ inline StkFloat Voicer :: tick( unsigned int channel )
   return lastFrame_[channel];
 }
 
+void Voicer::ProcessBlock(size_t n, DspFloatType * out) {
+  for ( j=0; j<lastFrame_.channels(); j++ ) lastFrame_[j] = 0.0;
+  #pragma omp parallel for shared(lastFrame_)
+  for(size_t i = 0; i < n; i++)
+  {
+    for ( unsigned int i=0; i<voices_.size(); i++ ) {
+      if ( voices_[i].sounding != 0 ) {
+        voices_[i].instrument->tick();
+        for ( j=0; j<voices_[i].instrument->channelsOut(); j++ ) lastFrame_[j] += voices_[i].instrument->lastOut( j );
+      }
+      if ( voices_[i].sounding < 0 )
+        voices_[i].sounding++;
+      if ( voices_[i].sounding == 0 )
+        voices_[i].noteNumber = -1;
+    }
+  }
+}
 inline StkFrames& Voicer :: tick( StkFrames& frames, unsigned int channel )
 {
   unsigned int nChannels = lastFrame_.channels();

@@ -98,6 +98,8 @@ class ADSR : public Generator
   */
   StkFrames& tick( StkFrames& frames, unsigned int channel = 0 );
 
+  void ProcessSIMD(size_t n, StkFloat * in, StkFloat * out);
+
  protected:  
 
   void sampleRateChanged( StkFloat newRate, StkFloat oldRate );
@@ -168,11 +170,66 @@ inline StkFrames& ADSR :: tick( StkFrames& frames, unsigned int channel )
 
   StkFloat *samples = &frames[channel];
   unsigned int hop = frames.channels();
+  // might do something?
+  #pragma omp simd
   for ( unsigned int i=0; i<frames.frames(); i++, samples += hop )
     *samples = ADSR::tick();
 
   return frames;
 }
+
+void ProcessSIMD(size_t n, StkFloat * in, StkFloat * out)
+{
+  #pragma omp simd
+  for(size_t i = 0; i < n; i++)
+  {
+    switch ( state_ ) {
+
+      case ATTACK:
+        value_ += attackRate_;
+        if ( value_ >= target_ ) {
+          value_ = target_;
+          target_ = sustainLevel_;
+          state_ = DECAY;
+        }
+        lastFrame_[0] = value_;
+        break;
+
+      case DECAY:
+        if ( value_ > sustainLevel_ ) {
+          value_ -= decayRate_;
+          if ( value_ <= sustainLevel_ ) {
+            value_ = sustainLevel_;
+            state_ = SUSTAIN;
+          }
+        }
+        else {
+          value_ += decayRate_; // attack target < sustain level
+          if ( value_ >= sustainLevel_ ) {
+            value_ = sustainLevel_;
+            state_ = SUSTAIN;
+          }
+        }
+        lastFrame_[0] = value_;
+        break;
+
+      case RELEASE:
+        value_ -= releaseRate_;
+        if ( value_ <= 0.0 ) {
+          value_ = 0.0;
+          state_ = IDLE;
+        }
+        lastFrame_[0] = value_;
+
+      }
+
+      out[i] = value_;
+  }
+  if(in) 
+    #pragma omp simd
+    for(size_t i = 0; i < n; i++) out[i] *= in[i];  
+}
+
 
 } // stk namespace
 

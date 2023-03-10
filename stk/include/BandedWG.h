@@ -94,6 +94,7 @@ class BandedWG : public Instrmnt
   */
   StkFrames& tick( StkFrames& frames, unsigned int channel = 0 );
 
+  
  protected:
 
   bool doPluck_;

@@ -14,13 +14,13 @@ namespace stk
         void removeInstrument( Instrmnt *instrument );
         long noteOn( StkFloat noteNumber, StkFloat amplitude, int group=0 );
         void noteOff( StkFloat noteNumber, StkFloat amplitude, int group=0 );
-        void noteOff( long tag, StkFloat amplitude );
+        //void noteOff( long tag, StkFloat amplitude );
         void setFrequency( StkFloat noteNumber, int group=0 );
-        void setFrequency( long tag, StkFloat noteNumber );
+        //void setFrequency( long tag, StkFloat noteNumber );
         void pitchBend( StkFloat value, int group=0 );
-        void pitchBend( long tag, StkFloat value );
+        //void pitchBend( long tag, StkFloat value );
         void controlChange( int number, StkFloat value, int group=0 );
-        void controlChange( long tag, int number, StkFloat value );
+        //void controlChange( long tag, int number, StkFloat value );
         void silence( void );
         unsigned int channelsOut( void ) const;
         const StkFrames& lastFrame( void ) const;

@@ -5,6 +5,7 @@
 
 namespace stk
 {
+    /*
     class Mutex : public Stk
     {
     public:
@@ -17,7 +18,7 @@ namespace stk
         void wait(void);
         void signal(void);
     };
-
+    */
     class Thread : public Stk
     {
     public:

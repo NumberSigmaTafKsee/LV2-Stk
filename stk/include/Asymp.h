@@ -88,6 +88,10 @@ class Asymp : public Generator
   */
   StkFrames& tick( StkFrames& frames, unsigned int channel = 0 );
 
+  // if in is null it is ignore
+  // if in is not null it is multiplied with the output  in * env
+  void ProcessSIMD(size_t n, StkFloat * in, StkFloat * out);
+
  protected:
 
   void sampleRateChanged( StkFloat newRate, StkFloat oldRate );
@@ -135,12 +139,42 @@ inline StkFrames& Asymp :: tick( StkFrames& frames, unsigned int channel )
 
   StkFloat *samples = &frames[channel];
   unsigned int hop = frames.channels();
+  #pragma omp simd
   for ( unsigned int i=0; i<frames.frames(); i++, samples += hop )
     *samples = Asymp::tick();
 
   return frames;
 }
 
+void ProcessSIMD(size_t n, StkFloat * in, StkFloat * out)
+{
+  #pragma omp simd
+  for(size_t i = 0; i < n; i++) {
+    if ( state_ ) {
+
+        value_ = factor_ * value_ + constant_;
+
+        // Check threshold.
+        if ( target_ > value_ ) {
+          if ( target_ - value_ <= TARGET_THRESHOLD ) {
+            value_ = target_;
+            state_ = 0;
+          }
+        }
+        else {
+          if ( value_ - target_ <= TARGET_THRESHOLD ) {
+            value_ = target_;
+            state_ = 0;
+          }
+        }
+        lastFrame_[0] = value_;
+      }
+      out[i] = value_;    
+  }
+  if(in)
+  #pragma omp simd
+    for(size_t i = 0; i < n; i++) out[i] *= in[i];
+}
 } // stk namespace
 
 #endif

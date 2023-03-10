@@ -88,6 +88,8 @@ class Blit: public Generator
   */
   StkFrames& tick( StkFrames& frames, unsigned int channel = 0 );
 
+  void ProcessSIMD(size_t n, StkFloat * out);
+
  protected:
 
   void updateHarmonics( void );
@@ -127,6 +129,28 @@ inline StkFloat Blit :: tick( void )
 
   lastFrame_[0] = tmp;
 	return lastFrame_[0];
+}
+
+void Blit::ProcessSIMD(size_t n, DspFloatType * out) {
+  // use memset
+  for ( size_t j=0; j<lastFrame_.channels(); j++ ) lastFrame_[j] = 0.0;
+
+  #pragma omp simd
+  for(size_t i = 0; i < n; i++) {    
+    StkFloat tmp, denominator = sin( phase_ );
+    if ( denominator <= std::numeric_limits<StkFloat>::epsilon() )
+      tmp = 1.0;
+    else {
+      tmp =  sin( m_ * phase_ );
+      tmp /= m_ * denominator;
+    }
+
+    phase_ += rate_;
+    if ( phase_ >= PI ) phase_ -= PI;
+
+    lastFrame_[i] = tmp;
+    out[i] = tmp;
+  }
 }
 
 inline StkFrames& Blit :: tick( StkFrames& frames, unsigned int channel )

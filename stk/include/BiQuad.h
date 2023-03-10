@@ -111,6 +111,8 @@ public:
   */
   StkFrames& tick( StkFrames& iFrames, StkFrames &oFrames, unsigned int iChannel = 0, unsigned int oChannel = 0 );
 
+  void ProcessSIMD(size_t n, StkFloatType * in, StkFloat * out);
+
  protected:
 
   virtual void sampleRateChanged( StkFloat newRate, StkFloat oldRate );
@@ -178,6 +180,24 @@ inline StkFrames& BiQuad :: tick( StkFrames& iFrames, StkFrames& oFrames, unsign
 
   lastFrame_[0] = outputs_[1];
   return iFrames;
+}
+
+void BiQuad::ProcessSIMD(size_t n, StkFloat * in, StkFloat * out)
+{
+  // use memset
+  for ( size_t j=0; j<lastFrame_.channels(); j++ ) lastFrame_[j] = 0.0;
+  
+  #pragma omp simd
+  for(size_t i = 0; i < n; i++) {    
+    inputs_[0] = gain_ * input;
+    lastFrame_[i] = b_[0] * inputs_[0] + b_[1] * inputs_[1] + b_[2] * inputs_[2];
+    lastFrame_[i] -= a_[2] * outputs_[2] + a_[1] * outputs_[1];
+    inputs_[2] = inputs_[1];
+    inputs_[1] = inputs_[0];
+    outputs_[2] = outputs_[1];
+    outputs_[1] = lastFrame_[i];
+    out[i] = outputs_[1];
+  }
 }
 
 } // stk namespace
