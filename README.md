@@ -8,3 +8,6 @@
 # Then it will be able to make physical modelling graph
 * It is not for perfect realism
 * It is meant for music and so it is approximate and fantasy
+
+# Faust has better physical modelling
+* It is just Faust is an alien machine intelligence language that is hard to understand
