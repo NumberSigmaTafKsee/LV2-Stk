@@ -29,3 +29,7 @@
 # normally, you never want that
 * But, it is something that is startling you ask what is that sound and where is it coming from
 * What made it and why 
+
+# so the basic physics of sound is very obvious
+* A low pass filter is someone muffled voice coming through a wall
+* YOu walk by low stone fence with music playing behind it and only the high frequency goes over it and makes a high pass
