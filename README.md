@@ -17,3 +17,11 @@
 * You will need other things the machine learning theories
 
 
+# That is the problem of sound
+* All sound is physics
+* If it is not physics it can not be sound
+
+# You are walking through your local market
+* Then, a hideous cacophony penetrate your ears
+* It sound strangely all high pitched and reverbreating
+* Yet the hideous flanging penetrates your mind and makes you feel ill
