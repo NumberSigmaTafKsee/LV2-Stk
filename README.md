@@ -25,3 +25,7 @@
 * Then, a hideous cacophony penetrate your ears
 * It sound strangely all high pitched and reverbreating
 * Yet the hideous flanging penetrates your mind and makes you feel ill
+
+# normally, you never want that
+* But, it is something that is startling you ask what is that sound and where is it coming from
+* What made it and why 
